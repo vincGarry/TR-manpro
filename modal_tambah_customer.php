@@ -40,12 +40,12 @@
 						<input type="number" class="form-control" name="nomor_telepon">
 					</div>
 				</div>
-            		</div> 
-		</div>
-            	<div class="modal-footer">
-                	<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-                	<button type="submit" name="tambah" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Save</a>
 			</form>
+            </div> 
+			</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                <button type="submit" name="tambah" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
             </div>
         </div>
     </div>
