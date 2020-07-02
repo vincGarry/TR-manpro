@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<tbbiaya>
+	<biaya>
+            <id_biaya>1</id_biaya>
+            <id_pengiriman></id_pengiriman>
+            <berat_barang>0</berat_barang>
+            <panjang_barang>0</panjang_barang>
+            <lebar_barang>0</lebar_barang>
+            <tinggi_barang>0</tinggi_barang>
+            <jarak_pengiriman>0</jarak_pengiriman>
+            <jenis_layanan></jenis_layanan>
+            <jalur_pengiriman></jalur_pengiriman>
+            <total_biaya>0</total_biaya>
+	</biaya>
+</tbbiaya>
