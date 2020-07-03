@@ -2,10 +2,10 @@
 	session_start();
 	if(isset($_POST['tambah'])){
 		$tbcustomer = simplexml_load_file('data/tbcustomer.xml');
-		$maxid = max(array_map('intval',$tbcustomer->xpath("//id_customer")));
+		$maxidcustomer = max(array_map('intval',$tbcustomer->xpath("//id_customer")));
 
 		$customer = $tbcustomer->addChild('customer');
-		$customer->addChild('id_customer', $maxid + 1);
+		$customer->addChild('id_customer', $maxidcustomer + 1);
 		$customer->addChild('nama', $_POST['nama']);
 		$customer->addChild('alamat', $_POST['alamat']);
 		$customer->addChild('email', $_POST['email']);
