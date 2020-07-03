@@ -1,4 +1,4 @@
-<div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal" id="tambah" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -37,15 +37,15 @@
 						<label class="control-label" style="position:relative; top:7px;">Nomor Telepon:</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="number" class="form-control" name="nomor_telepon">
+						<input type="text" class="form-control" name="nomor_telepon">
 					</div>
 				</div>
-			</form>
             </div> 
 			</div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-                <button type="submit" name="tambah" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> batal</button>
+                <button type="submit" name="tambahbaru" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span> simpan</button>
+            </form>
             </div>
         </div>
     </div>
