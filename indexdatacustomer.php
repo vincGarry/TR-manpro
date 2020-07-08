@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>DATA CUSTOMER</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <?php include('header.php'); ?>
 </head>
-<body>
-<div class="container">
-    <h1 class="page-header text-center">DATA CUSTOMER</h1>
-    <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-            <a href="#tambah" class="btn btn-success" data-toggle="modal"><span class="glyphicon glyphicon-plus"></span> tambah</a>
+
+<body class="">
+  <div class="wrapper ">
+    <?php include('sidebar.php'); ?>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+            </div>
+            <a class="navbar-brand" href="javascript:;">Penerima</a>
+          </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content" style="height: 800px;">
+        <div class="card">
+            <div class="col-sm-12 col-sm-offset-2">
             <table class="table table-bordered" style="margin-top:30px;">
                 <thead>
                     <th>ID_Customer</th>
@@ -47,10 +58,15 @@
                 </tbody>
             </table>
         </div>
+        </div>
+      </div>
+  <?php include('nama.php'); ?>
     </div>
-</div>
-<?php include('modal_tambah_customer.php'); ?>
-<script src="jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+  </div>
+  <!-- include php -->
+  <?php include('modal_tambah_data_pengiriman.php'); ?>
+  <?php include('footer.php'); ?>
+  
 </body>
+
 </html>

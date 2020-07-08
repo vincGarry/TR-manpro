@@ -1,27 +1,60 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>PENGIRIMAN</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <?php include('header.php'); ?>
 </head>
-<body>
-<div class="container">
-    <h1 class="page-header text-center">MANPRO PENGIRIMAN</h1>
-    <div class="row">
-        <div class="col-sm-12" align="center">           
-            <a class="btn btn-primary" href="indexdatacustomer.php" role="button">data customer</a>
-            <a class="btn btn-primary" href="indexdatapengiriman.php" role="button">data pengiriman</a>
-            <a class="btn btn-primary" href="indexdatatracking.php" role="button">data tracking</a>
-            <a class="btn btn-primary" href="indexdatabiaya.php" role="button">data biaya</a>
-            <a class="btn btn-primary" href="indexdatapembayaran.php" role="button">data pembayaran</a>
-            <br><br>
-            <a class="btn btn-success" href="#tambah" data-toggle="modal">pengiriman baru</a>
-        </div>
+
+<body class="" background="logistic.jpg">
+    
+      
+        
+          <div class="col-md-4 ml-auto mr-auto" style="text-align:center;margin-top:20%;">
+            <div class="card card-upgrade">
+              <div class="card-header text-center">
+                <h3 class="card-title">Login</h3>
+                  <h4 class="card-category">Aplikasi Pengiriman Barang</h4>
+                  
+              </div>
+              <div class="card-body">
+                <div class=" table-upgrade ">
+                  <table class="table">
+                    <form action="index.php" method="post">
+                    <tr>
+                      <td>Username</td>
+                      <td><input type="text" name="user"></td>
+                    </tr>
+                    <tr>
+                      <td>Password</td>
+                      <td><input type="password" name="pass"></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><input type="submit" value="Login"></td>
+                    </tr>
+                    </form>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        <?php
+        if (isset($_POST['user'])&&isset($_POST['pass'])) {
+        	$user = $_POST['user'];
+        	$pass = $_POST['pass'];
+        	if ($user == "admin" && $pass == "admin") {
+        		header("Location:index1.php");
+        	} else {
+        		header("Location:index.php");
+        	}
+        }
+        ?>
+      
+      
     </div>
-</div>
-<?php include('modal_tambah_data_pengiriman.php'); ?>
-<script src="jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+  </div>
+  <?php include('footer.php'); ?>
 </body>
+
 </html>

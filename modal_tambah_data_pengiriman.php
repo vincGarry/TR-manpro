@@ -1,9 +1,9 @@
 <div class="modal" id="tambah" tabindex="-1" role="dialog" aria-labelledby="modalpengiriman" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <center><h4 class="modal-title" id="modalpengiriman">tambah</h4></center>
+                <center><h4 class="modal-title" id="modalpengiriman">Tambah</h4></center>
             </div>
             <div class="modal-body">
 			<div class="container-fluid">

@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>DATA TRACKING</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <?php include('header.php'); ?>
 </head>
-<body>
-<div class="container">
-    <h1 class="page-header text-center">DATA TRACKING</h1>
-    <div class="row">
-        <a href="index.php" class="btn btn-outline-dark"><span class="glyphicon glyphicon-chevron-left"> back</span></a>
-        <div class="col-sm-8 col-sm-offset-2">
+
+<body class="">
+  <div class="wrapper ">
+    <?php include('sidebar.php'); ?>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="javascript:;">Tracking</a>
+          </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content" style="height: 800px;">
+        <div class="card">
+            <div class="col-sm-8 col-sm-offset-2">
             <!-- <a href="#tambah" class="btn btn-success" data-toggle="modal"><span class="glyphicon glyphicon-plus"></span> tambah</a> -->
             <?php 
                 session_start();
@@ -60,10 +69,15 @@
                 </tbody>
             </table>
         </div>
+        </div>
+      </div>
+  <?php include('nama.php'); ?>
     </div>
-</div>
-<?php// include('modal_tambah_data_pengiriman.php'); ?>
-<script src="jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+  </div>
+  <!-- include php -->
+  <?php include('modal_tambah_data_pengiriman.php'); ?>
+  <?php include('footer.php'); ?>
+  
 </body>
+
 </html>
