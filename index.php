@@ -1,4 +1,25 @@
+ <?php
+          if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+          }
+        if (isset($_POST['user'])&&isset($_POST['pass'])){
+          $user = $_POST['user'];
+          $pass = $_POST['pass'];
+          if ($user == "admin" && $pass == "admin") {
+            $_SESSION["login"] = $user;
+            
+              if (isset($_SESSION["login"])) {
+                        header("Location:index1.php");
+              } else {
+                        header("Location:index.php");
+              } 
 
+            
+          } else {
+            header("Location:index.php");
+          }
+        }
+        ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,18 +60,6 @@
               </div>
             </div>
           </div>
-        <?php
-        if (isset($_POST['user'])&&isset($_POST['pass'])) {
-        	$user = $_POST['user'];
-        	$pass = $_POST['pass'];
-        	if ($user == "admin" && $pass == "admin") {
-        		header("Location:index1.php");
-        	} else {
-        		header("Location:index.php");
-        	}
-        }
-        ?>
-      
       
     </div>
   </div>

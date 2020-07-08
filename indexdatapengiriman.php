@@ -22,7 +22,7 @@
             <div class="col-sm-12">
             <a href="#tambah" class="btn btn-success" data-toggle="modal" data-backdrop="static"><span class="glyphicon glyphicon-plus"></span> tambah</a>
             <?php 
-                session_start();
+                
                 if(isset($_SESSION['message'])){
                     ?>
                     <div class="alert alert-info text-center" style="margin-top:20px;">

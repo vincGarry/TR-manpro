@@ -1,8 +1,18 @@
-
+    <?php
+    if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+          }
+    if (!isset($_SESSION["login"])) {
+            header("Location:logout.php");
+    }
+    ?>
     <div class="sidebar" data-color="black" data-active-color="danger" >
       <div class="logo">
-        <a href="index.php" class="simple-text logo-normal">
-          Kelompok Manpro 4
+        <a href="index1.php" class="simple-text logo-normal">
+          <?php 
+          
+          echo $_SESSION["login"];
+          ?>
         </a>
       </div>
       <div class="sidebar-wrapper" style="overflow-x:hidden;">
@@ -50,7 +60,7 @@
             </a>
           </li>
           <li>
-            <a href="index.php">
+            <a href="logout.php">
               <i class="nc-icon nc-user-run"></i>
               <p>Logout</p>
             </a>
