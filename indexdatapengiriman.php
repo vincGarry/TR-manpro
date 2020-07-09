@@ -70,10 +70,10 @@
                             <td><?php echo $row->nomor_telepon_penerima; ?></td>
                             <td><?php echo $row->email_penerima; ?></td>
                             <td>
-                               <!--  <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" data-backdrop="static" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-                                <?php// include('modal_edit_customer.php'); ?>
-                                <a href="#delete_<?php echo $row->id_customer; ?>" data-toggle="modal" data-backdrop="static" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Hapus</a>
-                                <?php// include('modal_delete_customer.php'); ?> -->
+                                <!-- <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" data-backdrop="static" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                <?php// include('modal_edit_customer.php'); ?> -->
+                                <a href="#hapus_<?php echo $row->id_pengiriman; ?>" data-toggle="modal" data-backdrop="static" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Hapus</a>
+                                <?php include('modal_delete_pengiriman.php'); ?>
                             </td>
                         </tr>
                         <?php

@@ -1,17 +1,4 @@
 <?xml version="1.0"?>
 <tbpengiriman>
-	<pengiriman>
-		<id_pengiriman>1</id_pengiriman>
-        <id_user>1</id_user>
-        <tanggal_pengiriman>12-08-9999</tanggal_pengiriman>
-        <asal>asal</asal>
-        <tujuan>tujuan</tujuan>
-<!--    <id_biaya>biaya1</column>
-        <id_pembayaran>pembayaran1</column>
-        <id_tracking>tracking1</column> -->
-        <id_customer>1</id_customer>
-        <nama_penerima>penerima</nama_penerima>
-        <nomor_telepon_penerima>123131212</nomor_telepon_penerima>
-        <email_penerima>penerima@penerima.com</email_penerima>
-    </pengiriman>
+	
 </tbpengiriman>
