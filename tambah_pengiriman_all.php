@@ -12,6 +12,7 @@
 		$idcustomerbaru = $maxidcustomer + 1;
 
 		// load user
+		$admin = $_SESSION["login"];
 		// $tbcustomer = simplexml_load_file('data/tbuser.xml');
 
 		// load biaya 
@@ -32,7 +33,7 @@
 		// proses data pengririman
 		$pengiriman = $tbpengiriman->addChild('pengiriman');
 		$pengiriman->addChild('id_pengiriman', $idpengirimanbaru);
-		$pengiriman->addChild('id_user', 'testing');
+		$pengiriman->addChild('id_user', $admin);
 		$pengiriman->addChild('tanggal_pengiriman', $_POST['tanggal_pengiriman']);
 		$pengiriman->addChild('asal', $_POST['asal']);
 		$pengiriman->addChild('tujuan', $_POST['tujuan']);

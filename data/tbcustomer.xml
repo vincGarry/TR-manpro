@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <tbcustomer>
 	
-</tbcustomer>
+<customer><id_customer>1</id_customer><nama>test</nama><alamat>test</alamat><email>test@test.com</email><nomor_telepon>123456</nomor_telepon></customer><customer><id_customer>2</id_customer><nama>test1</nama><alamat>test1</alamat><email>test1@test.com</email><nomor_telepon>12345677</nomor_telepon></customer></tbcustomer>

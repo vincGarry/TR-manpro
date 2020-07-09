@@ -2,4 +2,4 @@
 <tbpembayaran>
 	
 
-</tbpembayaran>
+<pembayaran><id_pembayaran>1</id_pembayaran><id_pengiriman>1</id_pengiriman><metode_pembayaran>test</metode_pembayaran><status_pembayaran>test</status_pembayaran></pembayaran><pembayaran><id_pembayaran>2</id_pembayaran><id_pengiriman>2</id_pengiriman><metode_pembayaran>test1</metode_pembayaran><status_pembayaran>test1</status_pembayaran></pembayaran></tbpembayaran>
