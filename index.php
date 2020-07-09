@@ -17,7 +17,9 @@
         $_SESSION["login"] = $user;
         if (isset($_SESSION["login"])) {
           header("Location:index1.php");
-        }
+        } else {
+        header("Location:logout.php");
+      } 
       } 
     }
   }
@@ -46,11 +48,11 @@
                     <form action="index.php" method="post">
                     <tr>
                       <td>Username</td>
-                      <td><input type="text" name="user"></td>
+                      <td><input type="text" name="user" required=""></td>
                     </tr>
                     <tr>
                       <td>Password</td>
-                      <td><input type="password" name="pass"></td>
+                      <td><input type="password" name="pass" required=""></td>
                     </tr>
                     <tr>
                       <td></td>
