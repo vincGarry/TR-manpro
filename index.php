@@ -5,7 +5,9 @@
         if (isset($_POST['user'])&&isset($_POST['pass'])){
           $user = $_POST['user'];
           $pass = $_POST['pass'];
-          if ($user == "admin" && $pass == "admin") {
+          $tbuser = simplexml_load_file('data/tbuser.xml');
+          foreach($tbuser->user as $karyawan)
+          if ($user == $karyawan->username && $pass == $karyawan->password) {
             $_SESSION["login"] = $user;
             
               if (isset($_SESSION["login"])) {
