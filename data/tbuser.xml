@@ -18,4 +18,13 @@
         <email>admin2@admin.com</email>
         <nomor_telepon>082222222222</nomor_telepon>
     </user>
+    <user>
+        <id_user>3</id_user>
+        <username>admin3</username>
+        <password>admin3</password>
+        <nama>admin3</nama>
+        <alamat>admin3admin3</alamat>
+        <email>admin3@admin.com</email>
+        <nomor_telepon>082222222222</nomor_telepon>
+    </user>
 </tbuser>

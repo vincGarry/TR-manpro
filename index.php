@@ -1,27 +1,28 @@
  <?php
-          if (session_status() == PHP_SESSION_NONE) {
-            session_start();
-          }
-        if (isset($_POST['user'])&&isset($_POST['pass'])){
-          $user = $_POST['user'];
-          $pass = $_POST['pass'];
-          $tbuser = simplexml_load_file('data/tbuser.xml');
-          foreach($tbuser->user as $karyawan)
-          if ($user == $karyawan->username && $pass == $karyawan->password) {
-            $_SESSION["login"] = $user;
-            
-              if (isset($_SESSION["login"])) {
-                        header("Location:index1.php");
-              } else {
-                        header("Location:index.php");
-              } 
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+  }
+  $tbuser = simplexml_load_file('data/tbuser.xml');
 
-            
-          } else {
-            header("Location:index.php");
-          }
+  $username="";
+  $password="";
+  for($i = 0; $i < count($tbuser); $i++){
+    $username = $tbuser->user[$i]->username;
+    $password = $tbuser->user[$i]->password;
+  }
+    if (isset($_POST['user'])&&isset($_POST['pass'])){
+      $user = $_POST['user'];
+      $pass = $_POST['pass'];
+      if (($_POST['user'] == $username) && ($_POST['pass'] == $password)) {
+        unset($tbuser->user[$i]->password);
+        $_SESSION["login"] = $user;
+        if (isset($_SESSION["login"])) {
+          header("Location:index1.php");
         }
-        ?>
+      } 
+    }
+  
+?>
 <!DOCTYPE html>
 <html lang="en">
 
