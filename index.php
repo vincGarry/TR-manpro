@@ -9,7 +9,6 @@
   for($i = 0; $i < count($tbuser); $i++){
     $username = $tbuser->user[$i]->username;
     $password = $tbuser->user[$i]->password;
-  }
     if (isset($_POST['user'])&&isset($_POST['pass'])){
       $user = $_POST['user'];
       $pass = $_POST['pass'];
@@ -21,7 +20,7 @@
         }
       } 
     }
-  
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
