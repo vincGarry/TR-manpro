@@ -47,10 +47,10 @@
                             <td><?php echo $row->email; ?></td>
                             <td><?php echo $row->nomor_telepon; ?></td>
                             <td>                                 
-                              <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                             <!-- <a href="#edit_<?php echo $row->id_customer;?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
                                 <?php include('modal_edit_customer.php'); ?>
-                                <a href="#delete_/<?php  echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Hapus</a>
-                                <?php include('modal_delete_customer.php'); ?> 
+                                <a href="#delete_/<?php  echo $row->id_customer;?>" data-toggle="modal" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Hapus</a>
+                                <?php include('modal_delete_customer.php'); ?> -->
                             </td>
                         </tr>
                         <?php
