@@ -26,7 +26,6 @@
                 <thead>
                     <th>ID_USER</th>
                     <th>username</th>
-                    <th>Password</th>
                     <th>Nama</th>
                     <th>Alamat</th>
                     <th>Email</th>
@@ -43,16 +42,15 @@
                         <tr>
                             <td><?php echo $row->id_user; ?></td>
                             <td><?php echo $row->username; ?></td>
-                            <td><?php echo md5($row->password); ?></td>
                             <td><?php echo $row->nama; ?></td>
                             <td><?php echo $row->alamat; ?></td>
                             <td><?php echo $row->email; ?></td>
                             <td><?php echo $row->nomor_telepon; ?></td>
-                            <td>
-<!--                                 <a href="#edit_<?php //echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-                                <?php //include('modal_edit_customer.php'); ?>
-                                <a href="#delete_<?php // echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Hapus</a>
-                                <?php //include('modal_delete_customer.php'); ?> -->
+                            <td>                                 
+                              <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                <?php include('modal_edit_customer.php'); ?>
+                                <a href="#delete_/<?php  echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Hapus</a>
+                                <?php include('modal_delete_customer.php'); ?> 
                             </td>
                         </tr>
                         <?php

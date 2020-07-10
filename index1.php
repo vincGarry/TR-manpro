@@ -85,7 +85,7 @@
                         $tbstatus = simplexml_load_file('data/tbpembayaran.xml');
                         for ($i=0; $i < count($tbstatus) ; $i++) { 
                         $stats = $tbstatus->pembayaran[$i]->status_pembayaran;
-                        if ($stats == "Lunas") {
+                        if ($stats == "Belum lunas") {
                           $indi+=1;
                         }
                         }

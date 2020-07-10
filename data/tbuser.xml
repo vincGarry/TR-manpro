@@ -8,6 +8,7 @@
         <alamat>adminadmin</alamat>
         <email>admin@admin.com</email>
         <nomor_telepon>081111111111</nomor_telepon>
+        <admin>1</admin>
     </user>
     <user>
         <id_user>2</id_user>
@@ -17,6 +18,7 @@
         <alamat>admin2admin2</alamat>
         <email>admin2@admin.com</email>
         <nomor_telepon>082222222222</nomor_telepon>
+        <admin>0</admin>
     </user>
     <user>
         <id_user>3</id_user>
@@ -26,5 +28,6 @@
         <alamat>admin3admin3</alamat>
         <email>admin3@admin.com</email>
         <nomor_telepon>082222222222</nomor_telepon>
+        <admin>1</admin>
     </user>
 </tbuser>
