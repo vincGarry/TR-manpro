@@ -38,7 +38,10 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Total Pengiriman</p>
-                      <p class="card-title">hasil<p>
+                      <p class="card-title"><?php 
+                        $tbkirim = simplexml_load_file('data/tbpengiriman.xml');
+                        echo (count($tbkirim));
+                      ?><p>
                     </div>
                   </div>
                 </div>
@@ -76,7 +79,19 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Belum Lunas</p>
-                      <p class="card-title">hasil<p>
+                      <p class="card-title">
+                        <?php 
+                        $indi=0;
+                        $tbstatus = simplexml_load_file('data/tbpembayaran.xml');
+                        for ($i=0; $i < count($tbstatus) ; $i++) { 
+                        $stats = $tbstatus->pembayaran[$i]->status_pembayaran;
+                        if ($stats == "Lunas") {
+                          $indi+=1;
+                        }
+                        }
+                        echo $indi;
+                        ?>
+                      <p>
                     </div>
                   </div>
                 </div>
