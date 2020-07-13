@@ -21,17 +21,6 @@
         <div class="card">
             <div class="col-sm-12">
             <!-- <a href="#tambah" class="btn btn-success" data-toggle="modal"><span class="glyphicon glyphicon-plus"></span> tambah</a> -->
-            <?php 
-                if(isset($_SESSION['message'])){
-                    ?>
-                    <div class="alert alert-info text-center" style="margin-top:20px;">
-                        <?php echo $_SESSION['message']; ?>
-                    </div>
-                    <?php
-
-                    unset($_SESSION['message']);
-                }
-            ?>
             <table class="table table-bordered" style="margin-top:30px;">
                 <thead>
                     <th>ID BIAYA</th>

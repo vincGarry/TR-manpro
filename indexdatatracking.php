@@ -25,7 +25,10 @@
                 if(isset($_SESSION['message'])){
                     ?>
                     <div class="alert alert-info text-center" style="margin-top:20px;">
-                        <?php echo $_SESSION['message']; ?>
+                        <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+                            <i class="nc-icon nc-simple-remove"></i>
+                          </button>
+                        <span><?php echo $_SESSION['message']; ?></span>
                     </div>
                     <?php
 

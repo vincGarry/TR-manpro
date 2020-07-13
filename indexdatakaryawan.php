@@ -21,6 +21,20 @@
       <!-- End Navbar -->
       <div class="content" style="height: 800px;">
         <div class="card">
+          <?php 
+                if(isset($_SESSION['message'])){
+                    ?>
+                    <div class="alert alert-info text-center" style="margin-top:20px;">
+                        <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+                            <i class="nc-icon nc-simple-remove"></i>
+                          </button>
+                        <span><?php echo $_SESSION['message']; ?></span>
+                    </div>
+                    <?php
+
+                    unset($_SESSION['message']);
+                }
+            ?>
             <div class="col-sm-8 col-sm-offset-2">
             <table class="table table-bordered" style="margin-top:30px;">
                 <?php 
@@ -57,6 +71,8 @@
 
                 ?>
             </table>
+            <a href="#editu" data-toggle="modal" class="btn btn-primary "><span class="glyphicon glyphicon-edit"></span> Edit Profil</a>
+            <?php include('modal_edit_user.php'); ?>
             <?php
             if ($_SESSION["hak"]==1) {?>
             <a class="btn btn-success" href="karyawan.php">Tombol Admin</a>

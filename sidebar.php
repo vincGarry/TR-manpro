@@ -2,7 +2,7 @@
     if (session_status() == PHP_SESSION_NONE) {
             session_start();
           }
-    if (!isset($_SESSION["login"])) {
+    if (!isset($_SESSION["id"])) {
             header("Location:logout.php");
     }
     ?>
@@ -10,7 +10,13 @@
       <div class="logo">
         <a href="index1.php" class="simple-text logo-normal">
           <?php 
-           echo $_SESSION["login"];
+          $tbuser = simplexml_load_file('data/tbuser.xml');
+          for($i = 0; $i < count($tbuser); $i++){
+          $id = (string)$tbuser->user[$i]->id_user;
+          $nama = (string)$tbuser->user[$i]->nama;
+          if ($id == $_SESSION["id"]) {
+            echo $nama;
+          }}
           ?>
         </a>
       </div>

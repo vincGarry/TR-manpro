@@ -21,6 +21,20 @@
       <!-- End Navbar -->
       <div class="content" style="height: 800px;">
         <div class="card">
+          <?php 
+                if(isset($_SESSION['message'])){
+                    ?>
+                    <div class="alert alert-info text-center" style="margin-top:20px;">
+                        <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+                            <i class="nc-icon nc-simple-remove"></i>
+                          </button>
+                        <span><?php echo $_SESSION['message']; ?></span>
+                    </div>
+                    <?php
+
+                    unset($_SESSION['message']);
+                }
+            ?>
             <div class="col-sm-12 col-sm-offset-2">
             <table class="table table-bordered" style="margin-top:30px;">
                 <thead>
