@@ -15,7 +15,7 @@
           <div class="navbar-wrapper">
             <div class="navbar-toggle">
             </div>
-            <a class="navbar-brand" href="javascript:;">Penerima</a>
+            <a class="navbar-brand" href="javascript:;">Data detail karyawan</a>
           </div>
       </nav>
       <!-- End Navbar -->
@@ -59,6 +59,7 @@
                     ?>
                 </tbody>
             </table>
+            <a class="btn btn-danger" href="indexdatakaryawan.php">Kembali</a>
         </div>
         </div>
       </div>
@@ -66,7 +67,6 @@
     </div>
   </div>
   <!-- include php -->
-  <?php include('modal_tambah_data_pengiriman.php'); ?>
   <?php include('footer.php'); ?>
   
 </body>

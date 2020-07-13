@@ -4,7 +4,7 @@
         <id_user>1</id_user>
         <username>admin</username>
         <password>admin</password>
-        <nama>admin</nama>
+        <nama>gatot</nama>
         <alamat>adminadmin</alamat>
         <email>admin@admin.com</email>
         <nomor_telepon>081111111111</nomor_telepon>
@@ -13,8 +13,8 @@
     <user>
         <id_user>2</id_user>
         <username>admin2</username>
-        <password>admin2</password>
-        <nama>admin2</nama>
+        <password>admin23</password>
+        <nama>layla</nama>
         <alamat>admin2admin2</alamat>
         <email>admin2@admin.com</email>
         <nomor_telepon>082222222222</nomor_telepon>
@@ -24,7 +24,7 @@
         <id_user>3</id_user>
         <username>admin3</username>
         <password>admin3</password>
-        <nama>admin3</nama>
+        <nama>garry</nama>
         <alamat>admin3admin3</alamat>
         <email>admin3@admin.com</email>
         <nomor_telepon>082222222222</nomor_telepon>

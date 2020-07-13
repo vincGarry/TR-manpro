@@ -10,8 +10,7 @@
       <div class="logo">
         <a href="index1.php" class="simple-text logo-normal">
           <?php 
-          
-          echo $_SESSION["login"];
+           echo $_SESSION["login"];
           ?>
         </a>
       </div>
@@ -54,7 +53,7 @@
             </a>
           </li>
           <li>
-            <a href="karyawan.php">
+            <a href="indexdatakaryawan.php">
               <i class="nc-icon nc-badge"></i>
               <p>Karyawan</p>
             </a>

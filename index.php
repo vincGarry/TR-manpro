@@ -3,18 +3,17 @@
     session_start();
   }
   $tbuser = simplexml_load_file('data/tbuser.xml');
-
-  $username="";
-  $password="";
   for($i = 0; $i < count($tbuser); $i++){
-    $username = $tbuser->user[$i]->username;
-    $password = $tbuser->user[$i]->password;
+    $username = (string)$tbuser->user[$i]->username;
+    $password = (string)$tbuser->user[$i]->password;
+    $nama = (string)$tbuser->user[$i]->nama;
+    $id = (string)$tbuser->user[$i]->id_user;
+    $admin = (string)$tbuser->user[$i]->admin;
     if (isset($_POST['user'])&&isset($_POST['pass'])){
-      $user = $_POST['user'];
-      $pass = $_POST['pass'];
       if (($_POST['user'] == $username) && ($_POST['pass'] == $password)) {
-        unset($tbuser->user[$i]->password);
-        $_SESSION["login"] = $user;
+        $_SESSION["id"] = $id;
+        $_SESSION["login"] = $nama;
+        $_SESSION["hak"] = $admin;
         if (isset($_SESSION["login"])) {
           header("Location:index1.php");
         } else {
