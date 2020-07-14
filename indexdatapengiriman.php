@@ -22,18 +22,18 @@
             <div class="col-sm-12">
             <a href="#tambah" class="btn btn-success" data-toggle="modal" data-backdrop="static"><span class="glyphicon glyphicon-plus"></span> tambah</a>
             <?php 
-                if(isset($_SESSION['message'])){
-                    ?>
-                    <div class="alert alert-info text-center" style="margin-top:20px;">
-                        <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                            <i class="nc-icon nc-simple-remove"></i>
-                          </button>
-                        <span><?php echo $_SESSION['message']; ?></span>
-                    </div>
-                    <?php
+            if(isset($_SESSION['message'])){
+              ?>
+              <div class="alert alert-warning text-center" style="margin-top:20px;">
+                <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+                  <i class="nc-icon nc-simple-remove"></i>
+                </button>
+                <span><b><?php echo $_SESSION['message']; ?></b></span>
+              </div>
+              <?php
 
-                    unset($_SESSION['message']);
-                }
+              unset($_SESSION['message']);
+            }
             ?>
             <table class="table table-bordered" style="margin-top:30px;">
                 <thead>

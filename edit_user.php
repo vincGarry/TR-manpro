@@ -15,7 +15,11 @@
 		}
 		file_put_contents('data/tbuser.xml', $tbuser->asXML());
 		$_SESSION['message'] = 'Berhasil Diupdate';
-		header('location: indexdatakaryawan.php');
+		if ($_POST['redir']=="pr") {
+			header('location: indexdatakaryawan.php');
+		} else {
+			header('location: karyawan.php');
+		}
 	}
 	else{
 		$_SESSION['message'] = 'gagal update';

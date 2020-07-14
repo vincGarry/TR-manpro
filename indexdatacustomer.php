@@ -22,18 +22,18 @@
       <div class="content" style="height: 800px;">
         <div class="card">
           <?php 
-                if(isset($_SESSION['message'])){
-                    ?>
-                    <div class="alert alert-info text-center" style="margin-top:20px;">
-                        <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                            <i class="nc-icon nc-simple-remove"></i>
-                          </button>
-                        <span><?php echo $_SESSION['message']; ?></span>
-                    </div>
-                    <?php
+            if(isset($_SESSION['message'])){
+              ?>
+              <div class="alert alert-warning text-center" style="margin-top:20px;">
+                <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+                  <i class="nc-icon nc-simple-remove"></i>
+                </button>
+                <span><b><?php echo $_SESSION['message']; ?></b></span>
+              </div>
+              <?php
 
-                    unset($_SESSION['message']);
-                }
+              unset($_SESSION['message']);
+            }
             ?>
             <div class="col-sm-12 col-sm-offset-2">
             <table class="table table-bordered" style="margin-top:30px;">
@@ -61,8 +61,6 @@
                             <td>
                                 <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
                                 <?php include('modal_edit_customer.php'); ?>
-                                <a href="#delete_<?php echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Hapus</a>
-                                <?php include('modal_delete_customer.php'); ?>
                             </td>
                         </tr>
                         <?php

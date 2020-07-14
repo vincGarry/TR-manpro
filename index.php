@@ -3,6 +3,8 @@
     session_start();
   }
   $tbuser = simplexml_load_file('data/tbuser.xml');
+  $j=0;
+  $error = "Username atau Password salah!";
   for($i = 0; $i < count($tbuser); $i++){
     $username = (string)$tbuser->user[$i]->username;
     $password = (string)$tbuser->user[$i]->password;
@@ -12,13 +14,13 @@
       if (($_POST['user'] == $username) && ($_POST['pass'] == $password)) {
         $_SESSION["id"] = $id;
         $_SESSION["hak"] = $admin;
-        if (isset($_SESSION["id"])) {
-          header("Location:index1.php");
-        } else {
-        header("Location:logout.php");
-      } 
-      } 
+        $j=0;
+        header("Location:index1.php");
+      } else {$j+=1;} 
     }
+  }
+  if ($j==count($tbuser)) {
+    $_SESSION["message"]= $error;
   }
 ?>
 <!DOCTYPE html>
@@ -37,9 +39,23 @@
               <div class="card-header text-center">
                 <h3 class="card-title">Login</h3>
                   <h4 class="card-category">Aplikasi Pengiriman Barang</h4>
-                  
+                  <?php 
+                if(!empty($_SESSION['message'])){
+                    ?>
+                    <div class="alert alert-info text-center" style="margin-top:20px;">
+                        <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+                            <i class="nc-icon nc-simple-remove"></i>
+                          </button>
+                        <span><?php echo $_SESSION['message']; ?></span>
+                    </div>
+                    <?php
+
+                    unset($_SESSION['message']);
+                }
+            ?>  
               </div>
               <div class="card-body">
+                
                 <div class=" table-upgrade ">
                   <table class="table">
                     <form action="index.php" method="post">

@@ -140,7 +140,11 @@
 						<label class="control-label" style="position:relative; top:7px;">Jenis Layanan:</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="jenis_layanan">
+						<select name="jenis_layanan">
+							<option value="reguler">Reguler</option>
+							<option value="express">Express</option>
+						</select>
+						<!-- <input type="text" class="form-control" name="jenis_layanan"> -->
 					</div>
 				</div>
 				<div class="row form-group">

@@ -4,21 +4,21 @@
         <id_user>1</id_user>
         <username>admin</username>
         <password>admin</password>
-        <nama>Yulius Gatot P</nama>
+        <nama>Yulius Gatot Purwoko</nama>
         <alamat>adminadmin</alamat>
         <email>admin@admin.com</email>
-        <nomor_telepon>081111111111</nomor_telepon>
+        <nomor_telepon>081111111123</nomor_telepon>
         <admin>1</admin>
     </user>
     <user>
         <id_user>2</id_user>
         <username>admin2</username>
         <password>admin23</password>
-        <nama>layla</nama>
-        <alamat>admin2admin2</alamat>
+        <nama>Layla F</nama>
+        <alamat>adminadmin</alamat>
         <email>admin2@admin.com</email>
-        <nomor_telepon>082222222222</nomor_telepon>
-        <admin>0</admin>
+        <nomor_telepon>0823232323</nomor_telepon>
+        <admin>1</admin>
     </user>
     <user>
         <id_user>3</id_user>
@@ -27,7 +27,7 @@
         <nama>garry</nama>
         <alamat>admin3admin3</alamat>
         <email>admin3@admin.com</email>
-        <nomor_telepon>082222222222</nomor_telepon>
+        <nomor_telepon>082222222224</nomor_telepon>
         <admin>1</admin>
     </user>
-</tbuser>
+<user><id_user>4</id_user><username>admin4</username><password>cebong</password><nama>Admin Baru</nama><alamat>Jalan Besar</alamat><email>admin4@admin.com</email><nomor_telepon>087779999223</nomor_telepon><admin>0</admin></user><user><id_user>5</id_user><username>admin5</username><password>admin5</password><nama>admin baru lagi</nama><alamat>jl kecil</alamat><email>admin5@admin.com</email><nomor_telepon>085700000000</nomor_telepon><admin>0</admin></user></tbuser>
