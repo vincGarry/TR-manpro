@@ -47,10 +47,6 @@
                       <td><?php echo (string)$tbuser->user[$i]->username; ?></td>
                     </tr>
                     <tr>
-                      <th>Password </th>
-                      <td><?php echo md5((string)$tbuser->user[$i]->password); ?></td>
-                    </tr>
-                    <tr>
                       <th>Nama </th>
                       <td><?php echo (string)$tbuser->user[$i]->nama; ?></td>
                     </tr>
@@ -73,9 +69,11 @@
             </table>
             <a href="#editp" data-toggle="modal" class="btn btn-primary "><span class="glyphicon glyphicon-edit"></span> Edit Profil</a>
             <?php include('modal_edit_profil.php'); ?>
+            <a href="#gantip" data-toggle="modal" class="btn btn-danger "><span class="glyphicon glyphicon-edit"></span> Ganti Password</a>
+            <?php include('modal_ganti_password.php'); ?>
             <?php
             if ($_SESSION["hak"]==1) {?>
-            <a class="btn btn-success" href="karyawan.php">Tombol Admin</a>
+            <a class="btn btn-success" href="karyawan.php"><span class="glyphicon glyphicon-edit"></span>Tombol Admin</a>
               <?php
             }
             
