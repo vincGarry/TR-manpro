@@ -36,7 +36,14 @@
             }
             ?>
             <div class="col-sm-12 col-sm-offset-2">
-            <table class="table table-bordered" style="margin-top:30px;">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <br><input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari berdasarkan ID Customer..." >
+                  </div>
+                </div>
+              </div>
+            <table id="myTable" class="table table-bordered" style="margin-top:30px;">
                 <thead>
                     <th>ID_Customer</th>
                     <th>Nama</th>
@@ -76,6 +83,27 @@
     </div>
   </div>
   <!-- include php -->
+  <script>
+        function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
   <?php include('modal_tambah_data_pengiriman.php'); ?>
   <?php include('footer.php'); ?>
   

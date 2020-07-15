@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <?php include('header.php'); ?>
+  <?php include('header.php'); ?>
 </head>
 
 <body class="">
@@ -17,11 +17,11 @@
             </div>
             <a class="navbar-brand" href="javascript:;">Profil Karyawan</a>
           </div>
-      </nav>
-      <!-- End Navbar -->
-      <div class="content" style="height: 800px;">
-        <div class="card">
-          <?php 
+        </nav>
+        <!-- End Navbar -->
+        <div class="content" style="height: 800px;">
+          <div class="card">
+            <?php 
             if(isset($_SESSION['message'])){
               ?>
               <div class="alert alert-warning text-center" style="margin-top:20px;">
@@ -36,7 +36,7 @@
             }
             ?>
             <div class="col-sm-8 col-sm-offset-2">
-            <table class="table table-bordered" style="margin-top:30px;">
+              <table class="table table-bordered" style="margin-top:30px;">
                 <?php 
                 $tbuser = simplexml_load_file('data/tbuser.xml');
                 for($i = 0; $i < count($tbuser); $i++){
@@ -66,28 +66,27 @@
                 }
 
                 ?>
-            </table>
-            <a href="#editp" data-toggle="modal" class="btn btn-primary "><span class="glyphicon glyphicon-edit"></span> Edit Profil</a>
-            <?php include('modal_edit_profil.php'); ?>
-            <a href="#gantip" data-toggle="modal" class="btn btn-danger "><span class="glyphicon glyphicon-edit"></span> Ganti Password</a>
-            <?php include('modal_ganti_password.php'); ?>
-            <?php
-            if ($_SESSION["hak"]==1) {?>
-            <a class="btn btn-success" href="karyawan.php"><span class="glyphicon glyphicon-edit"></span>Tombol Admin</a>
+              </table>
+              <a href="#editp" data-toggle="modal" class="btn btn-primary "><span class="glyphicon glyphicon-edit"></span> Edit Profil</a>
+              <?php include('modal_edit_profil.php'); ?>
+              <a href="#gantip" data-toggle="modal" class="btn btn-danger "><span class="glyphicon glyphicon-edit"></span> Ganti Password</a>
+              <?php include('modal_ganti_password.php'); ?>
               <?php
-            }
-            
-            ?>
+              if ($_SESSION["hak"]==1) {?>
+                <a class="btn btn-success" href="karyawan.php"><span class="glyphicon glyphicon-edit"></span>Tombol Admin</a>
+                <?php
+              }
+
+              ?>
+            </div>
+          </div>
         </div>
-        </div>
+        <?php include('nama.php'); ?>
       </div>
-  <?php include('nama.php'); ?>
     </div>
-  </div>
-  <!-- include php -->
-  <?php include('modal_tambah_data_pengiriman.php'); ?>
-  <?php include('footer.php'); ?>
-  
+    <!-- include php -->
+<?php include('footer.php'); ?>
+
 </body>
 
 </html>

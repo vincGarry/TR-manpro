@@ -36,7 +36,14 @@
             }
             ?>
             <div class="col-sm-12 col-sm-offset-2">
-              <table class="table table-bordered" style="margin-top:30px;">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <br><input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari berdasarkan username..." >
+                  </div>
+                </div>
+              </div>
+              <table id=myTable class="table table-bordered" style="margin-top:30px;">
                 <thead>
                   <th>ID_USER</th>
                   <th>username</th>
@@ -87,8 +94,29 @@
         </div>
       </div>
       <!-- include php -->
-      <?php include('footer.php'); ?>
+      <script>
+        function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
 
-    </body>
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+<?php include('footer.php'); ?>
 
-    </html>
+</body>
+
+</html>
