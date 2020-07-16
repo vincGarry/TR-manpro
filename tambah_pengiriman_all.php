@@ -4,7 +4,7 @@
 		// load tb pengiriman
 		$tbpengiriman = simplexml_load_file('data/tbpengiriman.xml');
 		$maxidpengiriman = max(array_map('intval',$tbpengiriman->xpath("//id_pengiriman")));
-		$idpengirimanbaru = $maxidpengiriman +1;
+		$idpengirimanbaru = $maxidpengiriman + 1;
 
 		// load customer
 		$tbcustomer = simplexml_load_file('data/tbcustomer.xml');
@@ -12,7 +12,7 @@
 		$idcustomerbaru = $maxidcustomer + 1;
 
 		// load user
-		$admin = $_SESSION["login"];
+		$admin = $_SESSION["id"];
 		// $tbcustomer = simplexml_load_file('data/tbuser.xml');
 
 		// load biaya 
