@@ -16,15 +16,13 @@
 
  <h5 id="txt-isi"> Apa yang kami tawarkan?</h5>
 
-
     <?php include('footer.php'); ?>
 
     </body>
     </html>
     <?php include('nama.php'); ?>
 
-    
- <style>
+<style>
    #txt-welcome {
      text-align: center;
      color: black;
