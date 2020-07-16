@@ -45,7 +45,7 @@
               </div>
               <table id=myTable class="table table-bordered" style="margin-top:30px;">
                 <thead>
-                  <th>ID_USER</th>
+                  <!-- <th>ID_USER</th> -->
                   <th>username</th>
                   <th>Nama</th>
                   <th>Alamat</th>
@@ -61,7 +61,7 @@
                   foreach($file->user as $row){
                     if($row->id_user!=$_SESSION['id']){?>
                       <tr>
-                        <td><?php echo $row->id_user; ?></td>
+                        <!-- <td><?php echo $row->id_user; ?></td> -->
                         <td><?php echo $row->username; ?></td>
                         <td><?php echo $row->nama; ?></td>
                         <td><?php echo $row->alamat; ?></td>
