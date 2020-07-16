@@ -65,9 +65,9 @@
                       <td><?php echo $row->status_penerimaan; ?></td>
                       <td><?php echo $row->tanggal_penerimaan; ?></td>
                       <td>
-                            <!--   <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" data-backdrop="static" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-                              <?php// include('modal_edit_customer.php'); ?>
-                              <a href="#delete_<?php echo $row->id_customer; ?>" data-toggle="modal" data-backdrop="static" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Hapus</a>
+                              <a href="#edit_<?php echo $row->id_tracking; ?>" data-toggle="modal" data-backdrop="static" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                              <?php include('modal_edit_tracking.php'); ?>
+                              <!-- <a href="#delete_<?php echo $row->id_customer; ?>" data-toggle="modal" data-backdrop="static" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Hapus</a>
                               <?php// include('modal_delete_customer.php'); ?> -->
                             </td>
                           </tr>
@@ -105,7 +105,6 @@
               }
             }
           </script>
-          <?php include('modal_tambah_data_pengiriman.php'); ?>
           <?php include('footer.php'); ?>
           
         </body>
