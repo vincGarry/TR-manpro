@@ -58,7 +58,7 @@
                             <td><?php echo $row->lebar_barang; ?></td>
                             <td><?php echo $row->tinggi_barang; ?></td>
                             <td><?php echo $row->jarak_pengiriman; ?></td>
-                            <td><?php echo $row->jenis_pengiriman; ?></td>
+                            <td><?php echo $row->jenis_layanan; ?></td>
                             <td><?php echo $row->jalur_pengiriman; ?></td>
                             <td><?php echo $row->total_biaya; ?></td>
                             <td>

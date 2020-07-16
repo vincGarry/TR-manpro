@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <tbcustomer>
 	
-<customer><id_customer>3</id_customer><nama>testw</nama><alamat>testw</alamat><email>testw@mail.com</email><nomor_telepon>2134</nomor_telepon></customer><customer><id_customer>4</id_customer><nama>testw</nama><alamat>testw</alamat><email>testw@mail.com</email><nomor_telepon>124</nomor_telepon></customer></tbcustomer>
+<customer><id_customer>5</id_customer><nama>testw</nama><alamat>testw</alamat><email>testw@mail.com</email><nomor_telepon>123</nomor_telepon></customer><customer><id_customer>6</id_customer><nama>testw</nama><alamat>testw</alamat><email>testw@mail.com</email><nomor_telepon>123</nomor_telepon></customer></tbcustomer>

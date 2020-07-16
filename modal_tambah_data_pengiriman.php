@@ -152,7 +152,10 @@
 						<label class="control-label" style="position:relative; top:7px;">Jalur Pengiriman:</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="jalur_pengiriman">
+						<select name="jalur_pengiriman">
+							<option value="darat/laut">Darat/Laut</option>
+							<option value="udara">Udara</option>
+						</select>
 					</div>
 				</div>
 
