@@ -1,17 +1,20 @@
  <!DOCTYPE html>
  <html lang="en">
 
- <head>
-   <?php include('header.php'); ?>
- </head>
- <div class="row">
-   <button onclick="to_login()" id="btn-login" type="button" class="btn btn-primary center">LOGIN ADMIN</button>
- </div>
+<head>
+<?php include('header.php'); ?>
 
- <h1 id="txt-welcome">SELAMAT DATANG !</h1>
+</head>
+ <body class="">
+  <!-- <div class="wrapper "> -->
+    <?php include('sidebar_home.php'); ?>
+    <!-- <div class="main-panel"> -->
+<br />
+<br />
+<br />
+<br />
+ <h3 id="txt-welcome">SELAMAT DATANG,HELLO CUSTOMERS!!</h3>
 
-
- <body class="" background="logistic.jpg">
 
    <div class="col-md-4 ml-auto mr-auto" style="text-align:center;margin-top:20%;">
      <div class="card card-upgrade">
@@ -22,8 +25,8 @@
          <div class="card-body">
            <div class=" table-upgrade ">
              <table class="table">
-               <input name="resi" type="text"></input>
-               <button type="submit">CARI</button>
+               <input name="resi" type="text" class="form-control" placeholder="Masukkan Nomor Resi" autocomplete ="off"></input>
+               <button type="button" class="btn btn-info">Cari</button>
              </table>
            </div>
          </div>
@@ -75,23 +78,13 @@
    </div>
    <?php include('footer.php'); ?>
  </body>
-
  </html>
+ <?php include('nama.php'); ?>
 
- <script>
-   function to_login() {
-     window.location.href = "index.php";
-   }
- </script>
 
  <style>
-   #btn-login {
-     position: relative;
-     right: -90%;
-   }
-
    #txt-welcome {
      text-align: center;
-     color: white;
+     color: black;
    }
  </style>
