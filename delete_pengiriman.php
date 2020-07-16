@@ -2,15 +2,15 @@
 	session_start();
 	$id_pengiriman = $_GET['id_pengiriman'];
 
-	// $id_pengirim = $_GET['id_pengirim'];
-	// $id_penerima = $_GET['id_penerima'];
+	$id_pengirim = $_GET['id_pengirim'];
+	$id_penerima = $_GET['id_penerima'];
 
 	$id_biaya = $_GET['id_biaya'];
 	$id_tracking = $_GET['id_tracking'];
 	$id_pembayaran = $_GET['id_pembayaran'];
-	
+
 	$tbpengiriman = simplexml_load_file('data/tbpengiriman.xml');
-	$tbpengrim = simplexml_load_file('data/tbpengirim.xml');
+	$tbpengirim = simplexml_load_file('data/tbpengirim.xml');
 	$tbpenerima = simplexml_load_file('data/tbpenerima.xml');
 	$tbbiaya = simplexml_load_file('data/tbbiaya.xml');
 	$tbtracking = simplexml_load_file('data/tbtracking.xml');
@@ -29,31 +29,31 @@
 	unset($tbpengiriman->pengiriman[$indexpengiriman]);
 	file_put_contents('data/tbpengiriman.xml', $tbpengiriman->asXML());
 
-	// //hapus pengirim
- //    $indexpengirim = 0;
- //    $i_pengirim = 0;
- //    foreach($tbpengirim->pengirim as $pengirim){
- //        if($pengirim->id_pengirim == $id_pengirim){
- //            $indexpengirim = $i_pengirim;
- //            break;
- //        }
- //        $i_pengirim++;
- //    }
- //    unset($tbpengirim->pengirim[$indexpengirim]);
- //    file_put_contents('data/tbpengirim.xml', $tbpengirim->asXML());
+	//hapus pengirim
+    $indexpengirim = 0;
+    $i_pengirim = 0;
+    foreach($tbpengirim->pengirim as $pengirim){
+        if($pengirim->id_pengirim == $id_pengirim){
+            $indexpengirim = $i_pengirim;
+            break;
+        }
+        $i_pengirim++;
+    }
+    unset($tbpengirim->pengirim[$indexpengirim]);
+    file_put_contents('data/tbpengirim.xml', $tbpengirim->asXML());
 
-	// //hapus penerima
-	// $indexpenerima = 0;
-	// $i_penerima = 0;
-	// foreach($tbpenerima->penerima as $penerima){
-	// 	if($penerima->id_penerima == $id_penerima){
-	// 		$indexpenerima = $i_penerima;
-	// 		break;
-	// 	}
-	// 	$i_penerima++;
-	// }
-	// unset($tbpenerima->penerima[$indexpenerima]);
-	// file_put_contents('data/tbpenerima.xml', $tbpenerima->asXML());
+	//hapus penerima
+	$indexpenerima = 0;
+	$i_penerima = 0;
+	foreach($tbpenerima->penerima as $penerima){
+		if($penerima->id_penerima == $id_penerima){
+			$indexpenerima = $i_penerima;
+			break;
+		}
+		$i_penerima++;
+	}
+	unset($tbpenerima->penerima[$indexpenerima]);
+	file_put_contents('data/tbpenerima.xml', $tbpenerima->asXML());
 
 	//hapus biaya
 	$indexbiaya = 0;
