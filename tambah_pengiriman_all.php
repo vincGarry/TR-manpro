@@ -34,7 +34,7 @@
 		$pengiriman = $tbpengiriman->addChild('pengiriman');
 		$pengiriman->addChild('id_pengiriman', $idpengirimanbaru);
 		$pengiriman->addChild('id_user', $admin);
-		$pengiriman->addChild('tanggal_pengiriman', $_POST['tanggal_pengiriman']);
+		$pengiriman->addChild('tanggal_pengiriman', $_POST['tanggal']);
 		$pengiriman->addChild('asal', $_POST['asal']);
 		$pengiriman->addChild('tujuan', $_POST['tujuan']);
 		$pengiriman->addChild('id_biaya', $idbiayabaru);

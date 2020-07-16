@@ -68,7 +68,7 @@
                     <tr>
                       <td><?php echo $row->id_pengiriman; ?></td>
                       <td><?php echo $row->id_user; ?></td>
-                      <td><?php echo $row->id_tanggal_pengiriman; ?></td>
+                      <td><?php echo $row->tanggal_pengiriman; ?></td>
                       <td><?php echo $row->asal; ?></td>
                       <td><?php echo $row->tujuan; ?></td>
                       <td><?php echo $row->id_biaya; ?></td>

@@ -15,7 +15,7 @@
 						<label class="control-label" style="position:relative; top:7px;">Tanggal Pengiriman:</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="date" class="form-control" name="tanggal_pengiriman">
+						<input type="date" class="form-control" name="tanggal">
 					</div>
 				</div>
 				<div class="row form-group">
