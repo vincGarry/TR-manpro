@@ -9,65 +9,93 @@
   <div class="wrapper ">
     <?php include('sidebar.php'); ?>
     <div class="main-panel">
-      <!-- Navbar -->
+
       <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
         <div class="container-fluid">
           <div class="navbar-wrapper">
             <div class="navbar-toggle">
             </div>
-            <a class="navbar-brand" href="javascript:;">Penerima</a>
+            <a class="navbar-brand" href="javascript:;">Data Customer</a>
           </div>
       </nav>
-      <!-- End Navbar -->
-      <div class="content" style="height: 800px;">
-        <div class="card">
-          <?php 
-            if(isset($_SESSION['message'])){
-              ?>
-              <div class="alert alert-warning text-center" style="margin-top:20px;">
-                <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                  <i class="nc-icon nc-simple-remove"></i>
-                </button>
-                <span><b><?php echo $_SESSION['message']; ?></b></span>
-              </div>
-              <?php
 
-              unset($_SESSION['message']);
-            }
-            ?>
-            <div class="col-sm-12 col-sm-offset-2">
+      <div class="content row" style="height: 800px;">
+        <div class="card col-sm-6">
+            <div class="col-sm-12">
               <div class="row">
                 <div class="col-md-12">
+                  <div class="form-group" style="font-size: 20px; text-align: center;">
+                    <br>Pengirim
+                  </div>
                   <div class="form-group">
-                    <br><input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari berdasarkan ID Customer..." >
+                    <br><input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari berdasarkan ID Pengirim..." >
+                  </div>
+                </div>
+              </div>
+              <table id="myTable" class="table table-bordered" style="margin-top:30px;">
+                <thead>
+                    <th>ID_Pengirim</th>
+                    <th>Nama Pengirim</th>
+                    <th>Alamat Pengirim</th>
+                    <th>Nomor Telepon Pengirim</th>
+                    <th>pilihan</th>
+                </thead>
+                <tbody>
+                  <?php
+                    $file = simplexml_load_file('data/tbpengirim.xml');
+                    foreach($file->pengirim as $row){
+                  ?>
+                  <tr>
+                    <td><?php echo $row->id_pengirim; ?></td>
+                      <td><?php echo $row->nama_pengirim; ?></td>
+                      <td><?php echo $row->alamat_pengirim; ?></td>
+                      <td><?php echo $row->nomor_telepon_pengirim; ?></td>
+                      <td>
+                          <!--   <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                <?php include('modal_edit_customer.php'); ?> -->
+                      </td>
+                    </tr>
+                    <?php
+                      }
+                    ?>
+                </tbody>
+              </table>
+            </div>
+        </div>
+
+        <div class="card col-sm-6">
+        <div class="col-sm-12">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group" style="font-size: 20px; text-align: center;">
+                    <br>Penerima
+                  </div>
+                  <div class="form-group">
+                    <br><input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari berdasarkan ID Penerima..." >
                   </div>
                 </div>
               </div>
             <table id="myTable" class="table table-bordered" style="margin-top:30px;">
                 <thead>
-                    <th>ID_Customer</th>
-                    <th>Nama</th>
-                    <th>Alamat</th>
-                    <th>Email</th>
-                    <th>Nomor Telepon</th>
+                    <th>ID_penerima</th>
+                    <th>Nama penerima</th>
+                    <th>Alamat penerima</th>
+                    <th>Nomor Telepon penerima</th>
                     <th>pilihan</th>
                 </thead>
                 <tbody>
                     <?php
-                    //load xml file
-                    $file = simplexml_load_file('data/tbcustomer.xml');
-                    
-                    foreach($file->customer as $row){
+                    $file = simplexml_load_file('data/tbpenerima.xml');
+                    foreach($file->penerima as $row){
                         ?>
                         <tr>
-                            <td><?php echo $row->id_customer; ?></td>
-                            <td><?php echo $row->nama; ?></td>
-                            <td><?php echo $row->alamat; ?></td>
-                            <td><?php echo $row->email; ?></td>
-                            <td><?php echo $row->nomor_telepon; ?></td>
+                            <td><?php echo $row->id_penerima; ?></td>
+                            <td><?php echo $row->nama_penerima; ?></td>
+                            <td><?php echo $row->alamat_penerima; ?></td>
+                            <td><?php echo $row->nomor_telepon_penerima; ?></td>
                             <td>
-                                <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-                                <?php include('modal_edit_customer.php'); ?>
+                              <!--   <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                <?php include('modal_edit_customer.php'); ?> -->
                             </td>
                         </tr>
                         <?php
@@ -77,7 +105,7 @@
                 </tbody>
             </table>
         </div>
-        </div>
+      </div>
       </div>
   <?php include('nama.php'); ?>
     </div>

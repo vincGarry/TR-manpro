@@ -7,9 +7,13 @@
 		$idpengirimanbaru = $maxidpengiriman + 1;
 
 		// load customer
-		$tbcustomer = simplexml_load_file('data/tbcustomer.xml');
-		$maxidcustomer = max(array_map('intval',$tbcustomer->xpath("//id_customer")));
-		$idcustomerbaru = $maxidcustomer + 1;
+		$tbpengirim = simplexml_load_file('data/tbpengirim.xml');
+		$maxidpengirim = max(array_map('intval',$tbpengirim->xpath("//id_pengirim")));
+		$idpengirimbaru = $maxidpengirim + 1;
+
+		$tbpenerima = simplexml_load_file('data/tbpenerima.xml');
+		$maxidpenerima = max(array_map('intval',$tbpenerima->xpath("//id_penerima")));
+		$idpenerimabaru = $maxidpenerima + 1;
 
 		// load user
 		$admin = $_SESSION["id"];
@@ -40,20 +44,24 @@
 		$pengiriman->addChild('id_biaya', $idbiayabaru);
 		$pengiriman->addChild('id_pembayaran', $idpembayaranbaru);
 		$pengiriman->addChild('id_tracking', $idtrackingbaru);
-		$pengiriman->addChild('id_customer', $idcustomerbaru);
-		$pengiriman->addChild('nama_penerima', $_POST['nama_penerima']);
-		$pengiriman->addChild('nomor_telepon_penerima', $_POST['nomor_telepon_penerima']);
-		$pengiriman->addChild('email_penerima', $_POST['email_penerima']);
+		$pengiriman->addChild('id_pengirim', $idpengirimbaru);
+		$pengiriman->addChild('id_penerima', $idpenerimabaru);
 		file_put_contents('data/tbpengiriman.xml', $tbpengiriman->asXML());
 
 		// proses data customer
-		$customer = $tbcustomer->addChild('customer');
-		$customer->addChild('id_customer', $idcustomerbaru);
-		$customer->addChild('nama', $_POST['nama']);
-		$customer->addChild('alamat', $_POST['alamat']);
-		$customer->addChild('email', $_POST['email']);
-		$customer->addChild('nomor_telepon', $_POST['nomor_telepon']);
-		file_put_contents('data/tbcustomer.xml', $tbcustomer->asXML());
+		$penerima = $tbpenerima->addChild('penerima');
+		$penerima->addChild('id_penerima', $idpenerimabaru);
+		$penerima->addChild('nama_penerima', $_POST['nama_penerima']);
+		$penerima->addChild('alamat_penerima', $_POST['alamat_penerima']);
+		$penerima->addChild('nomor_telepon_penerima', $_POST['nomor_telepon_penerima']);
+		file_put_contents('data/tbpenerima.xml', $tbpenerima->asXML());
+
+		$pengirim = $tbpengirim->addChild('pengirim');
+		$pengirim->addChild('id_pengirim', $idpengirimbaru);
+		$pengirim->addChild('nama_pengirim', $_POST['nama_pengirim']);
+		$pengirim->addChild('alamat_pengirim', $_POST['alamat_pengirim']);
+		$pengirim->addChild('nomor_telepon_pengirim', $_POST['nomor_telepon_pengirim']);
+		file_put_contents('data/tbpengirim.xml', $tbpengirim->asXML());
 
 		// proses data biaya
 		$biaya = $tbbiaya->addChild('biaya');

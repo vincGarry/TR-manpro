@@ -1,12 +1,17 @@
 <?php
 	session_start();
 	$id_pengiriman = $_GET['id_pengiriman'];
-	$id_customer = $_GET['id_customer'];
+
+	// $id_pengirim = $_GET['id_pengirim'];
+	// $id_penerima = $_GET['id_penerima'];
+
 	$id_biaya = $_GET['id_biaya'];
 	$id_tracking = $_GET['id_tracking'];
 	$id_pembayaran = $_GET['id_pembayaran'];
+	
 	$tbpengiriman = simplexml_load_file('data/tbpengiriman.xml');
-	$tbcustomer = simplexml_load_file('data/tbcustomer.xml');
+	$tbpengrim = simplexml_load_file('data/tbpengirim.xml');
+	$tbpenerima = simplexml_load_file('data/tbpenerima.xml');
 	$tbbiaya = simplexml_load_file('data/tbbiaya.xml');
 	$tbtracking = simplexml_load_file('data/tbtracking.xml');
 	$tbpembayaran = simplexml_load_file('data/tbpembayaran.xml');
@@ -24,18 +29,31 @@
 	unset($tbpengiriman->pengiriman[$indexpengiriman]);
 	file_put_contents('data/tbpengiriman.xml', $tbpengiriman->asXML());
 
-	//hapus customer
-	$indexcustomer = 0;
-	$i_customer = 0;
-	foreach($tbcustomer->customer as $customer){
-		if($customer->id_customer == $id_customer){
-			$indexcustomer = $i_customer;
-			break;
-		}
-		$i_customer++;
-	}
-	unset($tbcustomer->customer[$indexcustomer]);
-	file_put_contents('data/tbcustomer.xml', $tbcustomer->asXML());
+	// //hapus pengirim
+ //    $indexpengirim = 0;
+ //    $i_pengirim = 0;
+ //    foreach($tbpengirim->pengirim as $pengirim){
+ //        if($pengirim->id_pengirim == $id_pengirim){
+ //            $indexpengirim = $i_pengirim;
+ //            break;
+ //        }
+ //        $i_pengirim++;
+ //    }
+ //    unset($tbpengirim->pengirim[$indexpengirim]);
+ //    file_put_contents('data/tbpengirim.xml', $tbpengirim->asXML());
+
+	// //hapus penerima
+	// $indexpenerima = 0;
+	// $i_penerima = 0;
+	// foreach($tbpenerima->penerima as $penerima){
+	// 	if($penerima->id_penerima == $id_penerima){
+	// 		$indexpenerima = $i_penerima;
+	// 		break;
+	// 	}
+	// 	$i_penerima++;
+	// }
+	// unset($tbpenerima->penerima[$indexpenerima]);
+	// file_put_contents('data/tbpenerima.xml', $tbpenerima->asXML());
 
 	//hapus biaya
 	$indexbiaya = 0;

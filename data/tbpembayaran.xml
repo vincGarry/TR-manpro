@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
 <tbpembayaran>
 	
-
-<pembayaran><id_pembayaran>5</id_pembayaran><id_pengiriman>3</id_pengiriman><metode_pembayaran>testw</metode_pembayaran><status_pembayaran>testw</status_pembayaran></pembayaran><pembayaran><id_pembayaran>6</id_pembayaran><id_pengiriman>4</id_pengiriman><metode_pembayaran>testw</metode_pembayaran><status_pembayaran>testw</status_pembayaran></pembayaran></tbpembayaran>
+</tbpembayaran>

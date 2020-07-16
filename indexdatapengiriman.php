@@ -52,10 +52,8 @@
                   <th>ID BIAYA</th>
                   <th>ID PEMBAYARAN</th>
                   <th>ID TRACKING</th>
-                  <th>ID CUSTOMER</th>
-                  <th>NAMA PENERIMA</th>
-                  <th>NOMOR TELEPON PENERIMA</th>
-                  <th>EMAIL PENERIMA</th>
+                  <th>ID PENGIRIM</th>
+                  <th>ID PENERIMA</th>
                   <th>PILIHAN</th>
                 </thead>
                 <tbody>
@@ -69,15 +67,13 @@
                       <td><?php echo $row->id_pengiriman; ?></td>
                       <td><?php echo $row->id_user; ?></td>
                       <td><?php echo $row->tanggal_pengiriman; ?></td>
+                      <td><?php echo $row->id_pengirim; ?></td>
+                      <td><?php echo $row->id_penerima; ?></td>
                       <td><?php echo $row->asal; ?></td>
                       <td><?php echo $row->tujuan; ?></td>
                       <td><?php echo $row->id_biaya; ?></td>
                       <td><?php echo $row->id_pembayaran; ?></td>
                       <td><?php echo $row->id_tracking; ?></td>
-                      <td><?php echo $row->id_customer; ?></td>
-                      <td><?php echo $row->nama_penerima; ?></td>
-                      <td><?php echo $row->nomor_telepon_penerima; ?></td>
-                      <td><?php echo $row->email_penerima; ?></td>
                       <td>
                                 <!-- <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" data-backdrop="static" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
                                   <?php// include('modal_edit_customer.php'); ?> -->

@@ -12,15 +12,15 @@
 				<!-- pengiriman -->
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Tanggal Pengiriman:</label>
+						<label class="control-label" style="position:relative; top:7px;">Tanggal Pengiriman</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="date" class="form-control" name="tanggal">
+						<input type="text" class="form-control" name="tanggal" value="<?php echo date('d / m / yy');?>">
 					</div>
 				</div>
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Asal Pengiriman:</label>
+						<label class="control-label" style="position:relative; top:7px;">Asal Pengiriman</label>
 					</div>
 					<div class="col-sm-8">
 						<input type="text" class="form-control" name="asal">
@@ -28,7 +28,7 @@
 				</div>
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Tujuan Pengiriman:</label>
+						<label class="control-label" style="position:relative; top:7px;">Tujuan Pengiriman</label>
 					</div>
 					<div class="col-sm-8">
 						<input type="text" class="form-control" name="tujuan" required="true">
@@ -36,7 +36,7 @@
 				</div>
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Nama Penerima:</label>
+						<label class="control-label" style="position:relative; top:7px;">Nama Penerima</label>
 					</div>
 					<div class="col-sm-8">
 						<input type="text" class="form-control" name="nama_penerima">
@@ -44,52 +44,44 @@
 				</div>
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Momor Telepon Penerima:</label>
+						<label class="control-label" style="position:relative; top:7px;">Alamat Penerima</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="number" class="form-control" name="nomor_telepon_penerima">
+						<input type="text" class="form-control" name="alamat_penerima">
 					</div>
 				</div>
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Email Penerima:</label>
+						<label class="control-label" style="position:relative; top:7px;">Nomor Telepon Penerima</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="email" class="form-control" name="email_penerima">
+						<input type="number" class="form-control" name="nomor_telepon_penerima">
 					</div>
 				</div>
 
 				<!-- customer -->
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Nama:</label>
+						<label class="control-label" style="position:relative; top:7px;">Nama Pengirim</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="nama">
+						<input type="text" class="form-control" name="nama_pengirim">
 					</div>
 				</div>
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Alamat:</label>
+						<label class="control-label" style="position:relative; top:7px;">Alamat Pengirim</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="alamat">
+						<input type="text" class="form-control" name="alamat_pengirim">
 					</div>
 				</div>
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Email:</label>
+						<label class="control-label" style="position:relative; top:7px;">Nomor Telepon Pengirim</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="email" class="form-control" name="email">
-					</div>
-				</div>
-				<div class="row form-group">
-					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Nomor Telepon:</label>
-					</div>
-					<div class="col-sm-8">
-						<input type="number" class="form-control" name="nomor_telepon">
+						<input type="number" class="form-control" name="nomor_telepon_pengirim">
 					</div>
 				</div>
 
@@ -97,7 +89,7 @@
 				<!-- Biaya -->
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Berat Barang:</label>
+						<label class="control-label" style="position:relative; top:7px;">Berat Barang</label>
 					</div>
 					<div class="col-sm-8">
 						<input type="number" class="form-control" name="berat_barang">
@@ -105,7 +97,7 @@
 				</div>
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Panjang Barang:</label>
+						<label class="control-label" style="position:relative; top:7px;">Panjang Barang</label>
 					</div>
 					<div class="col-sm-8">
 						<input type="number" class="form-control" name="panjang_barang">
@@ -113,7 +105,7 @@
 				</div>
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Lebar Barang:</label>
+						<label class="control-label" style="position:relative; top:7px;">Lebar Barang</label>
 					</div>
 					<div class="col-sm-8">
 						<input type="number" class="form-control" name="lebar_barang">
@@ -121,7 +113,7 @@
 				</div>
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Tinggi Barang:</label>
+						<label class="control-label" style="position:relative; top:7px;">Tinggi Barang</label>
 					</div>
 					<div class="col-sm-8">
 						<input type="number" class="form-control" name="tinggi_barang">
@@ -129,7 +121,7 @@
 				</div>
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Jarak pengiriman:</label>
+						<label class="control-label" style="position:relative; top:7px;">Jarak pengiriman</label>
 					</div>
 					<div class="col-sm-8">
 						<input type="number" class="form-control" name="lebar_barang">
@@ -137,7 +129,7 @@
 				</div>
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Jenis Layanan:</label>
+						<label class="control-label" style="position:relative; top:7px;">Jenis Layanan</label>
 					</div>
 					<div class="col-sm-8">
 						<select name="jenis_layanan">
@@ -149,7 +141,7 @@
 				</div>
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Jalur Pengiriman:</label>
+						<label class="control-label" style="position:relative; top:7px;">Jalur Pengiriman</label>
 					</div>
 					<div class="col-sm-8">
 						<select name="jalur_pengiriman">
@@ -163,7 +155,7 @@
 				<!-- Tracking -->
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Keterangan Pengiriman:</label>
+						<label class="control-label" style="position:relative; top:7px;">Keterangan Pengiriman</label>
 					</div>
 					<div class="col-sm-8">
 						<input type="text" class="form-control" name="keterangan_pengiriman">
@@ -173,7 +165,7 @@
 				<!-- Pembayaran -->
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Metode Pembayaran:</label>
+						<label class="control-label" style="position:relative; top:7px;">Metode Pembayaran</label>
 					</div>
 					<div class="col-sm-8">
 						<input type="text" class="form-control" name="metode_pembayaran">
@@ -181,7 +173,7 @@
 				</div>
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Status Pembayaran:</label>
+						<label class="control-label" style="position:relative; top:7px;">Status Pembayaran</label>
 					</div>
 					<div class="col-sm-8">
 						<input type="text" class="form-control" name="status_pembayaran">
