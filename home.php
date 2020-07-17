@@ -6,9 +6,9 @@
 </head>
 
 <body class="">
-    <!-- <div class="wrapper ">
+    <div class="wrapper ">
     <?php include('sidebar_home.php'); ?>
-    <div class="main-panel"> -->  
+    <div class="main-panel">
 <br />
 <br />
 <br />
