@@ -37,7 +37,7 @@
           <li>
             <a href="indexdatacustomer.php">
               <i class="nc-icon nc-single-02"></i>
-              <p>Penerima</p>
+              <p>Pelanggan</p>
             </a>
           </li>
           <li>

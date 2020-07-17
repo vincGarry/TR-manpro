@@ -30,4 +30,4 @@
         <nomor_telepon>082222222224</nomor_telepon>
         <admin>1</admin>
     </user>
-<user><id_user>4</id_user><username>admin4</username><password>cebong</password><nama>Admin Baru</nama><alamat>Jalan Besar</alamat><email>admin4@admin.com</email><nomor_telepon>087779999223</nomor_telepon><admin>0</admin></user><user><id_user>5</id_user><username>admin5</username><password>admin5</password><nama>admin baru lagi</nama><alamat>jl kecil</alamat><email>admin5@admin.com</email><nomor_telepon>085700000000</nomor_telepon><admin>0</admin></user></tbuser>
+<user><id_user>5</id_user><username>admin5</username><password>admin5</password><nama>admin baru lagi</nama><alamat>jl kecil</alamat><email>admin5@admin.com</email><nomor_telepon>085700000000</nomor_telepon><admin>0</admin></user></tbuser>
