@@ -2,6 +2,7 @@
  <html lang="en">
 
 <head>
+   <?php include('header.php'); ?>
 </head>
  <body class="">
 <br />
