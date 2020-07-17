@@ -37,9 +37,7 @@
                     <th>PANJANG BARANG</th>
                     <th>LEBAR BARANG</th>
                     <th>TINGGI BARANG</th>
-                    <th>JARAK PENGIRIMAN</th>
                     <th>JENIS PENGIRIMAN</th>
-                    <th>JALUR PENGIRIMAN</th>
                     <th>TOTAL BIAYA</th>
                     <th>PILIHAN</th>
                 </thead>
@@ -57,9 +55,7 @@
                             <td><?php echo $row->panjang_barang; ?></td>
                             <td><?php echo $row->lebar_barang; ?></td>
                             <td><?php echo $row->tinggi_barang; ?></td>
-                            <td><?php echo $row->jarak_pengiriman; ?></td>
                             <td><?php echo $row->jenis_layanan; ?></td>
-                            <td><?php echo $row->jalur_pengiriman; ?></td>
                             <td><?php echo $row->total_biaya; ?></td>
                             <td>
                                 <!-- <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>

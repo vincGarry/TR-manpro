@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	if(isset($_POST['tambahbaru'])){
+		
 		// load tb pengiriman
 		$tbpengiriman = simplexml_load_file('data/tbpengiriman.xml');
 		$maxidpengiriman = max(array_map('intval',$tbpengiriman->xpath("//id_pengiriman")));
@@ -34,13 +35,34 @@
 		$maxidpembayaran = max(array_map('intval',$tbpembayaran->xpath("//id_pembayaran")));
 		$idpembayaranbaru = $maxidpembayaran + 1;
 
-		// proses data pengririman
+		$berat = $_POST['berat_barang']*1000;
+		$curl = curl_init();
+		curl_setopt_array($curl, array(
+		  CURLOPT_URL => "http://api.rajaongkir.com/starter/cost",
+		  CURLOPT_RETURNTRANSFER => true,
+		  CURLOPT_ENCODING => "",
+		  CURLOPT_MAXREDIRS => 10,
+		  CURLOPT_TIMEOUT => 30,
+		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		  CURLOPT_CUSTOMREQUEST => "POST",
+		  CURLOPT_POSTFIELDS => "origin=".$_POST['kota_asal']."&destination=".$_POST['kota_tujuan']."&weight=".$berat."&courier="."jne"."",
+		  CURLOPT_HTTPHEADER => array(
+		    "content-type: application/x-www-form-urlencoded",
+		    "key:468d691bd3f44a767a70ef9042959b77"
+		  ),
+		));
+		$response = curl_exec($curl);
+		$err = curl_error($curl);
+		curl_close($curl);
+		$data= json_decode($response, true);
+		$kotaasal=$data['rajaongkir']['origin_details']['city_name'];
+		$kotatujuan=$data['rajaongkir']['destination_details']['city_name'];
 		$pengiriman = $tbpengiriman->addChild('pengiriman');
 		$pengiriman->addChild('id_pengiriman', $idpengirimanbaru);
 		$pengiriman->addChild('id_user', $admin);
 		$pengiriman->addChild('tanggal_pengiriman', $_POST['tanggal']);
-		$pengiriman->addChild('asal', $_POST['asal']);
-		$pengiriman->addChild('tujuan', $_POST['tujuan']);
+		$pengiriman->addChild('asal',$kotaasal);
+		$pengiriman->addChild('tujuan',$kotatujuan);
 		$pengiriman->addChild('id_biaya', $idbiayabaru);
 		$pengiriman->addChild('id_pembayaran', $idpembayaranbaru);
 		$pengiriman->addChild('id_tracking', $idtrackingbaru);
@@ -71,10 +93,12 @@
 		$biaya->addChild('panjang_barang', $_POST['panjang_barang']);
 		$biaya->addChild('lebar_barang', $_POST['lebar_barang']);
 		$biaya->addChild('tinggi_barang', $_POST['tinggi_barang']);
-		$biaya->addChild('jarak_pengiriman', 'TESTING');
 		$biaya->addChild('jenis_layanan', $_POST['jenis_layanan']);
-		$biaya->addChild('jalur_pengiriman', $_POST['jalur_pengiriman']);
-		$biaya->addChild('total_biaya', 'TESTING');
+		if ($_POST['jenis_layanan']=="reguler") {
+			$biaya->addChild('total_biaya', $data['rajaongkir']['results'][0]['costs']['1']["cost"]['0']["value"]);
+		} elseif ($_POST['jenis_layanan']=="express") {
+			$biaya->addChild('total_biaya', $data['rajaongkir']['results'][0]['costs']['0']["cost"]['0']["value"]);
+		}
 		file_put_contents('data/tbbiaya.xml', $tbbiaya->asXML());
 
 		// proses data pembayaran

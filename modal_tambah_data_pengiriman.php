@@ -23,7 +23,10 @@
 						<label class="control-label" style="position:relative; top:7px;">Asal Pengiriman</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="asal">
+						<select name="kota_asal" class="form-control">
+							<option value="" disabled selected>Pilih kota asal</option>
+							<?php include 'daftarkota.php' ?>
+						</select>
 					</div>
 				</div>
 				<div class="row form-group">
@@ -31,7 +34,10 @@
 						<label class="control-label" style="position:relative; top:7px;">Tujuan Pengiriman</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="tujuan" required="true">
+						<select name="kota_tujuan" class="form-control">
+							<option value="" disabled selected>Pilih kota tujuan</option>
+							<?php include 'daftarkota.php' ?>
+						</select>
 					</div>
 				</div>
 				<div class="row form-group">
@@ -121,14 +127,6 @@
 				</div>
 				<div class="row form-group">
 					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Jarak pengiriman</label>
-					</div>
-					<div class="col-sm-8">
-						<input type="number" class="form-control" name="lebar_barang">
-					</div>
-				</div>
-				<div class="row form-group">
-					<div class="col-sm-4">
 						<label class="control-label" style="position:relative; top:7px;">Jenis Layanan</label>
 					</div>
 					<div class="col-sm-8">
@@ -139,19 +137,6 @@
 						<!-- <input type="text" class="form-control" name="jenis_layanan"> -->
 					</div>
 				</div>
-				<div class="row form-group">
-					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Jalur Pengiriman</label>
-					</div>
-					<div class="col-sm-8">
-						<select name="jalur_pengiriman">
-							<option value="darat/laut">Darat/Laut</option>
-							<option value="udara">Udara</option>
-						</select>
-					</div>
-				</div>
-
-
 				<!-- Tracking -->
 				<div class="row form-group">
 					<div class="col-sm-4">
@@ -168,7 +153,10 @@
 						<label class="control-label" style="position:relative; top:7px;">Metode Pembayaran</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="metode_pembayaran">
+						<select name="metode_pembayaran">
+							<option value="reguler">Cash</option>
+							<option value="express">Cashless</option>
+						</select>
 					</div>
 				</div>
 				<div class="row form-group">
@@ -176,7 +164,10 @@
 						<label class="control-label" style="position:relative; top:7px;">Status Pembayaran</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="status_pembayaran">
+						<select name="status_pembayaran">
+							<option value="reguler">Reguler</option>
+							<option value="express">Express</option>
+						</select>
 					</div>
 				</div>
 
