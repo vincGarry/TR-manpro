@@ -2,19 +2,15 @@
  <html lang="en">
 
 <head>
-<?php include('header.php'); ?>
-
 </head>
  <body class="">
-  <div class="navbar-wrapper">
-    <?php include('sidebar_home.php'); ?>
-  </div>
-    <div class="main-panel">
 <br />
 <br />
 <br />
 <br />
  <h3 id="txt-welcome">SELAMAT DATANG,HELLO CUSTOMERS!!</h3>
+
+
    <div class="col-md-4 ml-auto mr-auto" style="text-align:center;margin-top:20%;">
      <div class="card card-upgrade">
        <div class="card-header text-center">
@@ -48,6 +44,7 @@
           return $return_value;
         }
         ?>
+     </div>
      <div class="card card-upgrade">
        <?php
         if ($resi) {
@@ -71,6 +68,8 @@
         }
         ?>
      </div>
+   </div>
+   </div>
    </div>
    <?php include('footer.php'); ?>
  </body>
