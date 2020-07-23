@@ -22,7 +22,7 @@
            <div class=" table-upgrade ">
              <table class="table">
                <input name="resi" type="text" class="form-control" placeholder="Masukkan Nomor Resi" autocomplete ="off"></input>
-               <button type="button" class="btn btn-info">Cari</button>
+               <button type="submit" class="btn btn-info">Cari</button>
              </table>
            </div>
          </div>
