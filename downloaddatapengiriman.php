@@ -54,7 +54,9 @@ header("Content-Disposition: attachment;Filename=data_pengiriman.doc");
 				<?php
 				$file1 = simplexml_load_file('data/tbpengiriman.xml');
 				$tbtracking = simplexml_load_file('data/tbtracking.xml');
+				$tbbiaya = simplexml_load_file('data/tbbiaya.xml');
 				foreach($file1->pengiriman as $row){
+					$pengiriman = $row->id_pengiriman;
 					?>
 					<tr>
 						<td><?php echo $row->id_pengiriman; ?></td>
@@ -62,14 +64,27 @@ header("Content-Disposition: attachment;Filename=data_pengiriman.doc");
 						<td><?php echo $row->tanggal_pengiriman; ?></td>
 						<td><?php echo $row->asal; ?></td>
 						<td><?php echo $row->tujuan; ?></td>
-						<td><?php echo $row->id_biaya; ?></td>
-						<td><?php echo $row->id_pembayaran; ?></td>
-						<td><?php foreach($tbtracking->tracking as $tracking){
-							if ($tracking->id_pengiriman == $row->id_pengiriman) {
-								return $tracking->keterangan_pengiriman;
+						<td><?php 
+							for($i = 0; $i < count($tbbiaya); $i++){
+								$id_biaya = (string)$tbbiaya->biaya[$i]->id_biaya;
+								$id_pengiriman = (string)$tbbiaya->biaya[$i]->id_pengiriman;
+								$total = (string)$tbbiaya->biaya[$i]->total_biaya;
+								if ($row->id_biaya == $id_biaya && $row->id_pengiriman == $id_pengiriman) {
+									echo $total;
+								}							
 							}
-							echo $tracking->keterangan_pengiriman;
-						}return 0; ?>
+						?></td>
+						<td><?php echo $row->id_pembayaran; ?></td>
+						<td><?php 
+							for($i = 0; $i < count($tbtracking); $i++){
+								$id_tracking = (string)$tbtracking->tracking[$i]->id_tracking;
+								$id_pengiriman = (string)$tbtracking->tracking[$i]->id_pengiriman;
+								$keterangan = (string)$tbtracking->tracking[$i]->keterangan_pengiriman;
+								if ($row->id_tracking == $id_tracking && $row->id_pengiriman == $id_pengiriman) {
+									echo $keterangan;
+								}							
+							}
+							 ?>
 						</td>
 						<td><?php echo $row->id_pengirim; ?></td>
 						<td><?php echo $row->id_penerima; ?></td>
