@@ -8,7 +8,6 @@
             <div class="modal-body">
 			<div class="container-fluid">
 			<form method="POST" action="edit_user.php">
-				<input type="hidden" name="redir" value="--">
 				<div class="row form-group">
 					<div class="col-sm-4">
 						<label class="control-label" style="position:relative; top:7px;">Username:</label>

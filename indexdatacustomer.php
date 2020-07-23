@@ -38,7 +38,6 @@
                     <th>Nama Pengirim</th>
                     <th>Alamat Pengirim</th>
                     <th>Nomor Telepon Pengirim</th>
-                    <th>pilihan</th>
                 </thead>
                 <tbody>
                   <?php
@@ -50,10 +49,7 @@
                       <td><?php echo $row->nama_pengirim; ?></td>
                       <td><?php echo $row->alamat_pengirim; ?></td>
                       <td><?php echo $row->nomor_telepon_pengirim; ?></td>
-                      <td>
-                          <!--   <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-                                <?php include('modal_edit_customer.php'); ?> -->
-                      </td>
+                      
                     </tr>
                     <?php
                       }
@@ -94,13 +90,12 @@
                             <td><?php echo $row->alamat_penerima; ?></td>
                             <td><?php echo $row->nomor_telepon_penerima; ?></td>
                             <td>
-                              <!--   <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-                                <?php include('modal_edit_customer.php'); ?> -->
+                                <a href="#edit_<?php echo $row->id_penerima; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                <?php include('modal_edit_customer.php'); ?> 
                             </td>
                         </tr>
                         <?php
                     }
-        
                     ?>
                 </tbody>
             </table>
@@ -151,7 +146,6 @@ function myFunction1() {
   }
 }
 </script>
-  <?php include('modal_tambah_data_pengiriman.php'); ?>
   <?php include('footer.php'); ?>
   
 </body>
