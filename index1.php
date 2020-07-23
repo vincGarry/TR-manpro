@@ -127,7 +127,15 @@
           </div>
         </div>
         <div class="row" >
+          <div class="col-sm-4" align="center">
             <a class="btn btn-success" href="#tambah" data-toggle="modal">pengiriman baru</a>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-4" align="center">
+            <a class="btn btn-outline-success" href="downloaddatapengiriman.php">download data pengiriman</a>
+          </div>
         </div>
         <div class="row" style="height: 800px;">
           
