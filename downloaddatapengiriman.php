@@ -54,7 +54,6 @@ header("Content-Disposition: attachment;Filename=data_pengiriman.doc");
 				<?php
 				$file1 = simplexml_load_file('data/tbpengiriman.xml');
 				$tbtracking = simplexml_load_file('data/tbtracking.xml');
-				
 				foreach($file1->pengiriman as $row){
 					?>
 					<tr>
@@ -66,13 +65,12 @@ header("Content-Disposition: attachment;Filename=data_pengiriman.doc");
 						<td><?php echo $row->id_biaya; ?></td>
 						<td><?php echo $row->id_pembayaran; ?></td>
 						<td><?php foreach($tbtracking->tracking as $tracking){
-							for($tracking->id_pengiriman == $row->id_pengiriman){
+							if ($tracking->id_pengiriman == $row->id_pengiriman) {
 								return $tracking->keterangan_pengiriman;
-								break;
 							}
 							echo $tracking->keterangan_pengiriman;
-							break;
-						} ?></td>
+						}return 0; ?>
+						</td>
 						<td><?php echo $row->id_pengirim; ?></td>
 						<td><?php echo $row->id_penerima; ?></td>
 					</tr>
