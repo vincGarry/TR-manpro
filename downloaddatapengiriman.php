@@ -85,7 +85,7 @@ header("Content-Disposition: attachment;Filename=data_pengiriman.doc");
 								$id_pengiriman = (string)$tbbiaya->biaya[$i]->id_pengiriman;
 								$total = (string)$tbbiaya->biaya[$i]->total_biaya;
 								if ($row->id_biaya == $id_biaya && $row->id_pengiriman == $id_pengiriman) {
-									echo $total;
+									echo " RP.".$total;
 								}							
 							}
 						?></td>

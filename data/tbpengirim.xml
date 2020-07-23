@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <tbpengirim>
 
-<pengirim><id_pengirim>1</id_pengirim><nama_pengirim>gatot</nama_pengirim><alamat_pengirim>sabang</alamat_pengirim><nomor_telepon_pengirim>321</nomor_telepon_pengirim></pengirim><pengirim><id_pengirim>2</id_pengirim><nama_pengirim>frida</nama_pengirim><alamat_pengirim>semarang</alamat_pengirim><nomor_telepon_pengirim>123</nomor_telepon_pengirim></pengirim><pengirim><id_pengirim>3</id_pengirim><nama_pengirim>Angga</nama_pengirim><alamat_pengirim>semarang</alamat_pengirim><nomor_telepon_pengirim>11111444</nomor_telepon_pengirim></pengirim></tbpengirim>
+<pengirim><id_pengirim>1</id_pengirim><nama_pengirim>Indra</nama_pengirim><alamat_pengirim>Indramayu</alamat_pengirim><nomor_telepon_pengirim>11114444</nomor_telepon_pengirim></pengirim><pengirim><id_pengirim>2</id_pengirim><nama_pengirim>Bayu</nama_pengirim><alamat_pengirim>Banyumas</alamat_pengirim><nomor_telepon_pengirim>22223333</nomor_telepon_pengirim></pengirim><pengirim><id_pengirim>3</id_pengirim><nama_pengirim>Via</nama_pengirim><alamat_pengirim>Kediri</alamat_pengirim><nomor_telepon_pengirim>777555</nomor_telepon_pengirim></pengirim></tbpengirim>
