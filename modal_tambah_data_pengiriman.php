@@ -154,8 +154,8 @@
 					</div>
 					<div class="col-sm-8">
 						<select name="metode_pembayaran">
-							<option value="reguler">Cash</option>
-							<option value="express">Cashless</option>
+							<option value="Cash">Cash</option>
+							<option value="Cashless">Cashless</option>
 						</select>
 					</div>
 				</div>
@@ -165,8 +165,8 @@
 					</div>
 					<div class="col-sm-8">
 						<select name="status_pembayaran">
-							<option value="reguler">Reguler</option>
-							<option value="express">Express</option>
+							<option value="Lunas">Lunas</option>
+							<option value="Belum Lunas">Belum Lunas</option>
 						</select>
 					</div>
 				</div>

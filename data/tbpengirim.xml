@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <tbpengirim>
 
-<pengirim><id_pengirim>1</id_pengirim><nama_pengirim>Online shop</nama_pengirim><alamat_pengirim>aceh 1212121</alamat_pengirim><nomor_telepon_pengirim>321321321</nomor_telepon_pengirim></pengirim><pengirim><id_pengirim>2</id_pengirim><nama_pengirim>yulius</nama_pengirim><alamat_pengirim>semarang</alamat_pengirim><nomor_telepon_pengirim>1234567890</nomor_telepon_pengirim></pengirim></tbpengirim>
+<pengirim><id_pengirim>2</id_pengirim><nama_pengirim>yulius</nama_pengirim><alamat_pengirim>semarang</alamat_pengirim><nomor_telepon_pengirim>1234567890</nomor_telepon_pengirim></pengirim><pengirim><id_pengirim>3</id_pengirim><nama_pengirim>gatot</nama_pengirim><alamat_pengirim>aceh</alamat_pengirim><nomor_telepon_pengirim>2</nomor_telepon_pengirim></pengirim></tbpengirim>
