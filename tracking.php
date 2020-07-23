@@ -2,14 +2,16 @@
  <html lang="en">
 
 <head>
-   <?php include('header.php'); ?>
+<?php include('header.php'); ?>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
  <body class="">
+  <?php include('sidebar_home.php'); ?>
 <br />
 <br />
 <br />
 <br />
- <h3 id="txt-welcome">SELAMAT DATANG,HELLO CUSTOMERS!!</h3>
+ <h1 id="txt-welcome">SELAMAT DATANG,HELLO CUSTOMERS!!</h1>
 
 
    <div class="col-md-4 ml-auto mr-auto" style="text-align:center;margin-top:20%;">
@@ -81,6 +83,6 @@
  <style>
    #txt-welcome {
      text-align: center;
-     color: black;
+     color: white;
    }
  </style>
