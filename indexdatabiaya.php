@@ -33,13 +33,12 @@
                 <thead>
                     <th>ID BIAYA</th>
                     <th>ID PENGIRIMAN</th>
-                    <th>BERAT BARANG</th>
-                    <th>PANJANG BARANG</th>
-                    <th>LEBAR BARANG</th>
-                    <th>TINGGI BARANG</th>
+                    <th>BERAT BARANG (KG)</th>
+                    <th>PANJANG BARANG (CM)</th>
+                    <th>LEBAR BARANG (CM)</th>
+                    <th>TINGGI BARANG (CM)</th>
                     <th>JENIS PENGIRIMAN</th>
                     <th>TOTAL BIAYA</th>
-                    <th>PILIHAN</th>
                 </thead>
                 <tbody>
                     <?php
@@ -57,12 +56,7 @@
                             <td><?php echo $row->tinggi_barang; ?></td>
                             <td><?php echo $row->jenis_layanan; ?></td>
                             <td><?php echo $row->total_biaya; ?></td>
-                            <td>
-                                <!-- <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-                                <?php// include('modal_edit_customer.php'); ?>
-                                <a href="#delete_<?php echo $row->id_customer; ?>" data-toggle="modal" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Hapus</a>
-                                <?php// include('modal_delete_customer.php'); ?> -->
-                            </td>
+                            
                         </tr>
                         <?php
                     }
@@ -99,7 +93,6 @@
   }
 }
 </script>
-  <?php include('modal_tambah_data_pengiriman.php'); ?>
   <?php include('footer.php'); ?>
   
 </body>

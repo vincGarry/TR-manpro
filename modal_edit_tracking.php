@@ -45,7 +45,7 @@
 						<label class="control-label" style="position:relative; top:7px;">Tanggal Penerimaan</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="tanggal_penerimaan" value="<?php echo date("Y/m/d"); ?>">
+						<input type="text" class="form-control" name="tanggal_penerimaan"  value="<?php echo date("Y/m/d"); ?>">
 					</div>
 				</div>
             </div> 

@@ -29,7 +29,6 @@
                 <span><b><?php echo $_SESSION['message']; ?></b></span>
               </div>
               <?php
-
               unset($_SESSION['message']);
             }
             ?>
@@ -48,6 +47,7 @@
                     <th>ID PENGIRIMAN</th>
                     <th>METODE PEMBAYARAN</th>
                     <th>STATUS PEMBAYARAN</th>
+                    <th>PILIHAN</th>
                 </thead>
                 <tbody>
                     <?php
@@ -63,10 +63,12 @@
                             <td><?php echo $row->status_pembayaran; ?></td>
 
                             <td>
-                               <!--  <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" data-backdrop="static" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-                                <?//php include('modal_edit_customer.php'); ?>
-                                <a href="#delete_<?php echo $row->id_customer; ?>" data-toggle="modal" data-backdrop="static" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Hapus</a>
-                                <?//php include('modal_delete_customer.php');?> -->
+                               <?php if ($row->status_pembayaran=="Belum Lunas") { ?>
+                                <a href="#lunas_<?php  echo $row->id_pembayaran;?>" data-toggle="modal" class="btn  btn-sm btn-danger"><span class="glyphicon glyphicon-trash"></span>Lunaskan</a>
+                                <?php include('modal_lunas.php'); ?>
+                               <?php } else{ ?>
+                                  <a href="#" class="btn btn-success"></a>
+                               <?php } ?>
                             </td>
                         </tr>
                         <?php
@@ -104,7 +106,6 @@
   }
 }
 </script>
-  <?php include('modal_tambah_data_pengiriman.php'); ?>
   <?php include('footer.php'); ?>
   
 </body>

@@ -18,6 +18,7 @@
 						<input type="text" class="form-control" name="tanggal" value="<?php echo date('d / m / yy');?>">
 					</div>
 				</div>
+				<!-- customer -->
 				<div class="row form-group">
 					<div class="col-sm-4">
 						<label class="control-label" style="position:relative; top:7px;">Asal Pengiriman</label>
@@ -29,6 +30,31 @@
 						</select>
 					</div>
 				</div>
+				<div class="row form-group">
+					<div class="col-sm-4">
+						<label class="control-label" style="position:relative; top:7px;">Nama Pengirim</label>
+					</div>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" name="nama_pengirim">
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-sm-4">
+						<label class="control-label" style="position:relative; top:7px;">Alamat Pengirim</label>
+					</div>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" name="alamat_pengirim">
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-sm-4">
+						<label class="control-label" style="position:relative; top:7px;">Nomor Telepon Pengirim</label>
+					</div>
+					<div class="col-sm-8">
+						<input type="number" class="form-control" name="nomor_telepon_pengirim">
+					</div>
+				</div>
+				<!-- Penerima -->
 				<div class="row form-group">
 					<div class="col-sm-4">
 						<label class="control-label" style="position:relative; top:7px;">Tujuan Pengiriman</label>
@@ -65,31 +91,7 @@
 					</div>
 				</div>
 
-				<!-- customer -->
-				<div class="row form-group">
-					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Nama Pengirim</label>
-					</div>
-					<div class="col-sm-8">
-						<input type="text" class="form-control" name="nama_pengirim">
-					</div>
-				</div>
-				<div class="row form-group">
-					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Alamat Pengirim</label>
-					</div>
-					<div class="col-sm-8">
-						<input type="text" class="form-control" name="alamat_pengirim">
-					</div>
-				</div>
-				<div class="row form-group">
-					<div class="col-sm-4">
-						<label class="control-label" style="position:relative; top:7px;">Nomor Telepon Pengirim</label>
-					</div>
-					<div class="col-sm-8">
-						<input type="number" class="form-control" name="nomor_telepon_pengirim">
-					</div>
-				</div>
+				
 
 
 				<!-- Biaya -->

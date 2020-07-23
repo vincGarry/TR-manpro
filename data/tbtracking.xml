@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <tbtracking>
 
-<tracking><id_tracking>1</id_tracking><id_pengiriman>1</id_pengiriman><keterangan_pengiriman>Buku</keterangan_pengiriman><status_penerimaan>DITERIMA</status_penerimaan><tanggal_penerimaan>2020/07/23</tanggal_penerimaan></tracking><tracking><id_tracking>2</id_tracking><id_pengiriman>2</id_pengiriman><keterangan_pengiriman>fragile</keterangan_pengiriman><status_penerimaan>DITERIMA</status_penerimaan><tanggal_penerimaan>2020/07/23</tanggal_penerimaan></tracking></tbtracking>
+<tracking><id_tracking>1</id_tracking><id_pengiriman>1</id_pengiriman><keterangan_pengiriman>mainan</keterangan_pengiriman><status_penerimaan>TESTING</status_penerimaan><tanggal_penerimaan>2020/07/23</tanggal_penerimaan></tracking><tracking><id_tracking>2</id_tracking><id_pengiriman>2</id_pengiriman><keterangan_pengiriman>buku</keterangan_pengiriman><status_penerimaan>-</status_penerimaan><tanggal_penerimaan>-</tanggal_penerimaan></tracking></tbtracking>

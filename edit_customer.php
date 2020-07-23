@@ -13,10 +13,8 @@
 			}
 		}
 		file_put_contents('data/tbpenerima.xml', $tbcustomer->asXML());
-		$_SESSION['message'] = 'Berhasil Diupdate';
 		header('location: indexdatacustomer.php');
 	}
 	else{
-		$_SESSION['message'] = 'gagal update';
 		header('location: indexdatacustomer.php');
 	}

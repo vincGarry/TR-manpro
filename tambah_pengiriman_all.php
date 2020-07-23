@@ -114,8 +114,8 @@
 		$tracking->addChild('id_tracking', $idtrackingbaru);
 		$tracking->addChild('id_pengiriman', $idpengirimanbaru);
 		$tracking->addChild('keterangan_pengiriman', $_POST['keterangan_pengiriman']);
-		$tracking->addChild('status_penerimaan', 'TESTING');
-		$tracking->addChild('tanggal_penerimaan', 'testing');
+		$tracking->addChild('status_penerimaan', '-');
+		$tracking->addChild('tanggal_penerimaan', '-');
 		file_put_contents('data/tbtracking.xml', $tbtracking->asXML());
 
 		$_SESSION['message'] = 'sukses';

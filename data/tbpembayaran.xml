@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <tbpembayaran>
 	
-<pembayaran><id_pembayaran>2</id_pembayaran><id_pengiriman>2</id_pengiriman><metode_pembayaran>reguler</metode_pembayaran><status_pembayaran>Belum Lunas</status_pembayaran></pembayaran><pembayaran><id_pembayaran>3</id_pembayaran><id_pengiriman>3</id_pengiriman><metode_pembayaran>reguler</metode_pembayaran><status_pembayaran>reguler</status_pembayaran></pembayaran><pembayaran><id_pembayaran>4</id_pembayaran><id_pengiriman>3</id_pengiriman><metode_pembayaran>Cashless</metode_pembayaran><status_pembayaran>Belum Lunas</status_pembayaran></pembayaran></tbpembayaran>
+<pembayaran><id_pembayaran>1</id_pembayaran><id_pengiriman>1</id_pengiriman><metode_pembayaran>Cash</metode_pembayaran><status_pembayaran>Lunas</status_pembayaran></pembayaran><pembayaran><id_pembayaran>2</id_pembayaran><id_pengiriman>2</id_pengiriman><metode_pembayaran>Cash</metode_pembayaran><status_pembayaran>Lunas</status_pembayaran></pembayaran></tbpembayaran>

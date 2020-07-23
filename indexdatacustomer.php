@@ -21,7 +21,6 @@
 
       <div class="content row" style="height: 800px;">
         <div class="card col-sm-6">
-            <div class="col-sm-12">
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group" style="font-size: 20px; text-align: center;">
@@ -56,11 +55,9 @@
                     ?>
                 </tbody>
               </table>
-            </div>
         </div>
 
         <div class="card col-sm-6">
-        <div class="col-sm-12">
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group" style="font-size: 20px; text-align: center;">
@@ -99,7 +96,6 @@
                     ?>
                 </tbody>
             </table>
-        </div>
       </div>
       </div>
   <?php include('nama.php'); ?>
