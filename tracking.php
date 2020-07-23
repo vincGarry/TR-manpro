@@ -14,7 +14,7 @@
  <h1 id="txt-welcome">SELAMAT DATANG,HELLO CUSTOMERS!!</h1>
 
 
-   <div class="col-md-4 ml-auto mr-auto" style="text-align:center;margin-top:20%;">
+   <div class="col-md-4 ml-auto mr-auto" style="text-align:center;">
      <div class="card card-upgrade">
        <div class="card-header text-center">
          <h4 class="card-category">Tracking Nomor Resi</h4>

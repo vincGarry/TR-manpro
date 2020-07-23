@@ -75,8 +75,8 @@
                       <td><?php echo $row->id_pengirim; ?></td>
                       <td><?php echo $row->id_penerima; ?></td>
                       <td>
-                                <!-- <a href="#edit_<?php echo $row->id_customer; ?>" data-toggle="modal" data-backdrop="static" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-                                  <?php// include('modal_edit_customer.php'); ?> -->
+                                <!-- <a href="#edit_<?php echo $row->id_pengiriman; ?>" data-toggle="modal" data-backdrop="static" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                  <?php// include('modal_edit_pengiriman.php'); ?> -->
                                   <a href="#hapus_<?php echo $row->id_pengiriman; ?>" data-toggle="modal" data-backdrop="static" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Hapus</a>
                                   <?php include('modal_delete_pengiriman.php'); ?>
                                 </td>
