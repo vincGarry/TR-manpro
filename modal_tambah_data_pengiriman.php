@@ -100,7 +100,7 @@
 						<label class="control-label" style="position:relative; top:7px;">Berat Barang</label>
 					</div>
 					<div class="col-sm-8">
-						<input type="number" class="form-control" name="berat_barang">
+						<input type="number" class="form-control" name="berat_barang" min="1" max="30">
 					</div>
 				</div>
 				<div class="row form-group">
