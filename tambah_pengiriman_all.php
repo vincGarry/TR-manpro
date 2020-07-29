@@ -73,6 +73,7 @@
 		// proses data customer
 		$penerima = $tbpenerima->addChild('penerima');
 		$penerima->addChild('id_penerima', $idpenerimabaru);
+		$penerima->addChild('id_pengiriman', $idpengirimanbaru);
 		$penerima->addChild('nama_penerima', $_POST['nama_penerima']);
 		$penerima->addChild('alamat_penerima', $_POST['alamat_penerima']);
 		$penerima->addChild('nomor_telepon_penerima', $_POST['nomor_telepon_penerima']);
@@ -80,6 +81,7 @@
 
 		$pengirim = $tbpengirim->addChild('pengirim');
 		$pengirim->addChild('id_pengirim', $idpengirimbaru);
+		$pengirim->addChild('id_pengiriman', $idpengirimanbaru);
 		$pengirim->addChild('nama_pengirim', $_POST['nama_pengirim']);
 		$pengirim->addChild('alamat_pengirim', $_POST['alamat_pengirim']);
 		$pengirim->addChild('nomor_telepon_pengirim', $_POST['nomor_telepon_pengirim']);

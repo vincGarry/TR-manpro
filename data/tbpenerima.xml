@@ -4,4 +4,4 @@
 
 
 
-<penerima><id_penerima>1</id_penerima><nama_penerima>Band</nama_penerima><alamat_penerima>Bandung</alamat_penerima><nomor_telepon_penerima>44441111</nomor_telepon_penerima></penerima><penerima><id_penerima>2</id_penerima><nama_penerima>Budi</nama_penerima><alamat_penerima>Brebes</alamat_penerima><nomor_telepon_penerima>33332222</nomor_telepon_penerima></penerima><penerima><id_penerima>3</id_penerima><nama_penerima>Mila</nama_penerima><alamat_penerima>Salatiga</alamat_penerima><nomor_telepon_penerima>444555</nomor_telepon_penerima></penerima></tbpenerima>
+<penerima><id_penerima>1</id_penerima><id_pengiriman>1</id_pengiriman><nama_penerima>Anggi</nama_penerima><alamat_penerima>Kota Salatiga</alamat_penerima><nomor_telepon_penerima>085559</nomor_telepon_penerima></penerima><penerima><id_penerima>2</id_penerima><id_pengiriman>2</id_pengiriman><nama_penerima>Riko</nama_penerima><alamat_penerima>Kudus</alamat_penerima><nomor_telepon_penerima>0858585</nomor_telepon_penerima></penerima></tbpenerima>
