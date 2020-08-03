@@ -60,7 +60,19 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Terkirim</p>
-                      <p class="card-title">hasil<p>
+                      <p class="card-title">
+                        <?php 
+                        $indi2=0;
+                        $tbtracking = simplexml_load_file('data/tbtracking.xml');
+                        for ($i=0; $i < count($tbtracking) ; $i++) { 
+                        $stats = $tbtracking->tracking[$i]->status_penerimaan;
+                        if ($stats == "Terkirim") {
+                          $indi2+=1;
+                        }
+                        }
+                        echo $indi2;
+                        ?>
+                      <p>
                     </div>
                   </div>
                 </div>
@@ -111,16 +123,12 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Karyawan</p>
-                      <p class="card-title">hasil<p>
+                      <p class="card-title"><?php 
+                        $tbuser = simplexml_load_file('data/tbuser.xml');
+                        echo (count($tbuser));
+                      ?><p>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                <div class="stats">
-                  <i class="fa fa-refresh"></i>
-                  link
                 </div>
               </div>
             </div>
@@ -129,14 +137,10 @@
         <div class="row" >
           <div class="col-sm-4" align="center">
             <a class="btn btn-success" href="#tambah" data-toggle="modal">pengiriman baru</a>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-sm-4" align="center">
             <a class="btn btn-outline-success" href="downloaddatapengiriman.php">download data pengiriman</a>
           </div>
         </div>
+        
         <div class="row" style="height: 800px;">
           
         </div>
